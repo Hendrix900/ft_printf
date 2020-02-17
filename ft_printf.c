@@ -12,12 +12,34 @@
 
 #include "ft_printf.h"
 
- int	ft_printf(const char *s, ...)
+ void str_printf(const char *s, t_list_printf *next)
  {
 
+	 while (s[next->len] != '\0')
+	{	
+		 write(1, &s[next->len], 1);
+	 
+	 	if (s[next->len] == '%')
+	 	{
+			break ;
+	 	}
+	 	next->len++;
+	}
+ }
+  
+ int	ft_printf(const char *s, ...)
+ {
+	t_list_printf	*next;
+	
+	va_start(next->args ,s);
+	next->len = 0;
+	str_printf(s,next);
 
+ }
 
+ int main()
+ {
 
-
-
+	ft_printf("d4234");
+		 
  }

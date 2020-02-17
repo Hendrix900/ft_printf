@@ -18,7 +18,19 @@
 # include <stdlib.h>
 # include "./libft/libft.h" 
 
- int	ft_printf(const char *s, ...);
+typedef struct		s_list_printf
+{
+	va_list			args;
+	int				len;
+	int				i;
+	int				c;
+	char			*str;
+	int				hexa;
+	int				p;
+	unsigned int	u;
+}					t_list_printf;
 
+
+ int	ft_printf(const char *s, ...);
 
 #endif
