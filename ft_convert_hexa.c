@@ -30,7 +30,30 @@ int		ft_convert_len(int n)
 	return (l);
 }
 
-char 	*ft_convert_hexa(int n)
+char 	*ft_convert_hexa_lower(int n)
+{
+	char *s;
+	int l;
+	int rest;
+
+	l = ft_convert_len(n);
+	s = malloc(sizeof(char) * l);
+	s[l--] = '\0';
+	if (n == 0)
+		s[l--] = 48;
+	while (n != 0)
+	{
+		rest = n % 16;
+		if (rest < 10)
+			s[l--] = (char)(48 + rest);
+		else if (rest >= 10)
+			s[l--] = (char)(87 + rest);
+		n = n / 16;
+	}
+	return (s);
+}
+
+char 	*ft_convert_hexa_upper(int n)
 {
 	char *s;
 	int l;
@@ -56,11 +79,12 @@ char 	*ft_convert_hexa(int n)
 int main()
 {
 	int b;
-	b = 0;
+	b = 518451;
 	char *s;
 
-	s = ft_convert_hexa(b);
+	s = ft_convert_hexa_lower(b);
 	
 	printf("El número hexadecimal es : %s\n", s);
+	printf("El número hexadecimal es : %X\n", b);
 
 }

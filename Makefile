@@ -5,28 +5,30 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ccastill <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/02/12 17:39:53 by ccastill          #+#    #+#              #
-#    Updated: 2020/02/12 17:39:53 by ccastill         ###   ########.fr        #
+#    Created: 2020/02/19 06:55:26 by ccastill          #+#    #+#              #
+#    Updated: 2020/02/19 06:55:26 by ccastill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
-FUN_PRINTF = 
+FUN_PRINTF = ft_printf.c ft_flags.c ft_spaces.c ft_zeros.c
 
-OBJS_PRINTF =
+OBJS_PRINTF = ft_printf.o ft_flags.o ft_spaces.o ft_zeros.o
 
-FUN_LIBFT =
+FUN_LIBFT = ./libft/ft_atoi.c ./libft/ft_substr.c ./libft/ft_strlen.c ./libft/ft_putchar_fd.c \
+			
 
-OBJS_LIBFT =
+OBJS_LIBFT = ./libft/ft_atoi.o ./libft/ft_substr.o ./libft/ft_strlen.o ./libft/ft_putchar_fd.o \
+		
 
-CFLAGS = -c - I -Wall -Wextra -Werror
+CFLAGS = -c -I -Wall -Wextra -Werror
 
 all: $(NAME) # Regla principal. Al ejecutar Make se ejecutará.
 
-$(NAME): $(OBJS_PRINTF) $(OBJS_LIBFT) printf.h ./libft/libft.h
+$(NAME): $(OBJS_PRINTF) $(OBJS_LIBFT) ft_printf.h ./libft/libft.h
 	@gcc $(CFLAGS) $(FUN_PRINTF) $(FUN_LIBFT)
-	@ar rc $(NAME) $(OBJS_PRINTF) $(OBJS_LIBFT)  
+	@ar rc $(NAME) $(OBJS_PRINTF) $(OBJS_LIBFT)
 	@ranlib $(NAME)
 
 clean:

@@ -76,7 +76,7 @@ int main()
 		printf("Tipo char: %c\n", c); // %c Caracter ASCII correspondiente indicado entre el 0 y el 255 o entre ' '
 		printf("Tipo cadena: %s\n", d); // %s Cadena de caracteres (terminada en '\0')
 		printf("Tipo Hexadecimal: %x\n", e); // %x o X convierte el número a base 16 (hexadecimal), con letras en minúsculas o mayúsculas respectivamente.
-		printf("Tipo Dirección de memoria: %p\n", d); // %p Dirección de memoria (Puntero)
+		printf("Tipo Dirección de memoria: %p\n", e); // %p Dirección de memoria (Puntero)
 		printf("Entero sin signo: %u\n", e); // %u Entero con base 10 sin signo.
 		printf("Imprime el signo: %%\n\n"); // %% Imprime el signo %
 

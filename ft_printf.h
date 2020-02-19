@@ -20,17 +20,30 @@
 
 typedef struct		s_list_printf
 {
+	int				br; // Conocer cuantas posiciones hay antes del %??? no lo se
+	int				flags; // Servirá para comprobar los flags
+	int				widht; // Servirá para comprobar el ancho
+	int				precision; // Servira para comprobar la precisión
+	int				type; // Servirá para comprobar los tipos.
+
 	va_list			args;
-	int				len;
-	int				i;
-	int				c;
-	char			*str;
-	int				hexa;
-	int				p;
-	unsigned int	u;
+
+	int				len; // Posición de la cadena
+	int				i; // %i o %d
+	int				c; // %c Caracteres ASCII
+	char			*str; // %s Cadena de caracteres
+	int				hexa; // %xX hexadecimal
+	int				p; // %p puntero (Dirección de memoria)
+	unsigned int	u; // %u Entero sin sígno.
+
 }					t_list_printf;
 
 
- int	ft_printf(const char *s, ...);
+ int				ft_printf(const char *s, ...);
+ int				ft_flags(const char *s, t_list_printf *next);
+ void				ft_zeros(int n, t_list_printf *next);
+ void				ft_spaces(int n, t_list_printf *next);
+
+
 
 #endif
