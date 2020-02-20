@@ -15,14 +15,26 @@
 int		ft_flags(const char *s, t_list_printf *next)
 {
 	if (s[next->len] == '-')
+	{
+		next->len++;
 		return ('-');
+	}
 	else if (s[next->len] == '0')
+	{
+		next->len++;
 		return ('0');
+	}
+	else if (s[next->len] == '*')
+	{
+		next->len++;
+		return ('*');
+	}
+	else if (s[next->len] == '.')
+	{
+		next->len++;
+		return ('.');
+	}
 	else if (s[next->len] >= '1' && s[next->len] <= '9')
 		return (1);
-	else if (s[next->len == '.'])
-		return ('.');
-	else if (s[next->len == '*'])
-		return ('*');
-	return (0); // En caso de ser un * devolverá 0
+	return (0); 
 }

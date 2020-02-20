@@ -20,14 +20,13 @@
 
 typedef struct		s_list_printf
 {
+	va_list			args;
 	int				br; // Conocer cuantas posiciones hay antes del %??? no lo se
 	int				flags; // Servirá para comprobar los flags
 	int				width; // Servirá para comprobar el ancho
 	int				precision; // Servira para comprobar la precisión
 	int				type; // Servirá para comprobar los tipos.
 	int 			neg; // variable para números negativos
-
-	va_list			args;
 
 	int				len; // Posición de la cadena
 	int				i; // %i o %d

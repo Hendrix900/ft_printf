@@ -25,15 +25,24 @@ size_t	ft_strlen_printf(const char *s, int l)
 	return (q);
 }
 
+void	ft_axterix(t_list_printf *next)
+{
+	next->width = va_arg(next->args, int);
+	if (next->width < 0)
+	{
+		next->width *= -1;
+		next->neg = 1;
+	}
+	next->len++;
+}
+
 int		ft_width(const char *s, int f, t_list_printf *next)
 {
 	char	*temp;
 	size_t	len;
 
 	next->neg = 0;
-	if (f == '-' || f == '0' || f == '.' || f == '*')
-	next->len++;
-	if (f == '-' || f == '0' || f == '.' || f == 1)
+	if (f == '-' || f == '0' || f == '.' || f == 1 || f == '*')
 	{
 		if (s[next->len] >= '0' && s[next->len] <= '9')
 		{
@@ -44,8 +53,8 @@ int		ft_width(const char *s, int f, t_list_printf *next)
 			temp = NULL;
 			next->len += len;
 		}
-		//else if (f == '*')
-		//	ft_axterix(tab); // Indicar que de un salto el len.
+		else if (f == '*')
+			ft_axterix(next); 
 	}
 	return (next->width);
 }

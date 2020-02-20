@@ -63,6 +63,7 @@ int		check_flags(const char *s, t_list_printf *next)
 	va_start(next->args ,s);
 	next->len = 0;
 	str_printf(s,next);
+	va_end(next->args);
 	return (0);
  }
 
@@ -71,7 +72,7 @@ int main()
 	int a;
 	a = 58465;
 
-	ft_printf("%.2s\n");
+	ft_printf("%-98\n", 5, a);
 	//printf("Hola %-05i  cojo %.18i\n", a, 0);
 }
 
