@@ -15,10 +15,15 @@
 int		check_flags(const char *s, t_list_printf *next)
 {
 	next->flags = 0;
-	next->widht = 0;
+	next->width = 0;
 	next->precision = 0;
 	next->type = 0;
 	next->flags = ft_flags(s, next);
+	printf("El flag es: %d\n", next->flags);
+	next->width = ft_width(s, next->flags, next);
+	printf("El ancho es: %d\n", next->width);
+
+	
 	//next->widht = ft_width(s, next);
 	return (0);
 }
@@ -66,7 +71,7 @@ int main()
 	int a;
 	a = 58465;
 
-	ft_printf("Hola %018i  cojo %18i\n");
-	printf("Hola %18i  cojo %.18i\n", a, 0);
+	ft_printf("%.2s\n");
+	//printf("Hola %-05i  cojo %.18i\n", a, 0);
 }
 

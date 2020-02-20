@@ -12,9 +12,9 @@
 
 NAME = libftprintf.a
 
-FUN_PRINTF = ft_printf.c ft_flags.c ft_spaces.c ft_zeros.c
+FUN_PRINTF = ft_printf.c ft_flags.c ft_width.c ft_spaces.c ft_zeros.c
 
-OBJS_PRINTF = ft_printf.o ft_flags.o ft_spaces.o ft_zeros.o
+OBJS_PRINTF = ft_printf.o ft_flags.o ft_width.o ft_spaces.o ft_zeros.o
 
 FUN_LIBFT = ./libft/ft_atoi.c ./libft/ft_substr.c ./libft/ft_strlen.c ./libft/ft_putchar_fd.c \
 			

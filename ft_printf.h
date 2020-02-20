@@ -22,9 +22,10 @@ typedef struct		s_list_printf
 {
 	int				br; // Conocer cuantas posiciones hay antes del %??? no lo se
 	int				flags; // Servirá para comprobar los flags
-	int				widht; // Servirá para comprobar el ancho
+	int				width; // Servirá para comprobar el ancho
 	int				precision; // Servira para comprobar la precisión
 	int				type; // Servirá para comprobar los tipos.
+	int 			neg; // variable para números negativos
 
 	va_list			args;
 
@@ -41,6 +42,7 @@ typedef struct		s_list_printf
 
  int				ft_printf(const char *s, ...);
  int				ft_flags(const char *s, t_list_printf *next);
+ int				ft_width(const char *s, int f, t_list_printf *next);
  void				ft_zeros(int n, t_list_printf *next);
  void				ft_spaces(int n, t_list_printf *next);
 
