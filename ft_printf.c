@@ -22,6 +22,7 @@ int		check_flags(const char *s, t_list_printf *next)
 	printf("El flag es: %d\n", next->flags);
 	next->width = ft_width(s, next->flags, next);
 	printf("El ancho es: %d\n", next->width);
+	//next->precision
 
 	
 	//next->widht = ft_width(s, next);
@@ -72,7 +73,7 @@ int main()
 	int a;
 	a = 58465;
 
-	ft_printf("%-98\n", 5, a);
+	ft_printf("%*\n", 0, a);
 	//printf("Hola %-05i  cojo %.18i\n", a, 0);
 }
 
