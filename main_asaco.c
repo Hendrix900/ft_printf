@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_asaco.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 05:58:42 by ccastill          #+#    #+#             */
-/*   Updated: 2020/02/20 05:58:42 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/05/06 19:25:43 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,9 @@ int main()
 	printf("%.3d\n",a); // Es igual AL SIGUEINTE
 	printf("%.03d\n", a);  // Es igual AL ANTERIOR
 	printf("%.4d\n",a); // Si el número que se da es mayor que la cantidad de digitos de la variable, se añaden zeros a la izq
-	printf("%.04d\n", 5, a); // Zeros despues de punto es indiferente.
+	printf("%.04d\n",a); // Zeros despues de punto es indiferente.
 	printf("%.2s\n", b); //El número indicado será la máxima extensión de la cadena
-	printf("%.d\n", 0); // Si se pasa 0 no pasará nada NULL
+	printf("% .d\n", 0); // Si se pasa 0 no pasará nada NULL
 
 //---------------------Width-----------------------------
 	printf("Width\n"); 
@@ -63,7 +63,5 @@ int main()
 	printf("%*.04d\n",5 , a); // Zeros despues de punto es indiferente.
 	printf("%*.2s\n",5 , b); //El número indicado será la máxima extensión de la cadena
 	printf("%*.d\n",5 , 0); // Si se pasa 0 no pasará nada NULL
- 
-
-
+	
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   Explication_main.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 18:41:11 by ccastill          #+#    #+#             */
-/*   Updated: 2020/02/11 18:41:11 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/05/06 17:52:12 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int main()
 	/*++++++++Obligatorios++++++++++*/
 	   	printf("%10i\n", a); // Rellena tantos espacios como se indique a la izquierda del valor pasado. 
 		printf("%010i\n", a); // Rellena tantos ceros como se indique a la izquierda del valor pasado. 
-		printf("|%-5d\n", 1); // Justifica el campo a la izquierda (Por defecto se justifica a la derecha)
+		printf("%-5d\n", 1); // Justifica el campo a la izquierda (Por defecto se justifica a la derecha)
 
 	printf("Flags (Bonus)\n");
 	/*++++++++Bonus+++++++++*/

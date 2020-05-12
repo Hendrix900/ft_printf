@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_convert_memory.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 07:29:05 by ccastill          #+#    #+#             */
-/*   Updated: 2020/02/18 07:29:05 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/05/11 18:20:04 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,9 +57,12 @@ char     *ft_convert_hexa_lower(long int n)
 
 int main()
 {
-    int b;
-    b = -897458;
+    //int b;
+    //b = 897458;
     char *s;
+
+    int a = 10;
+    int *b = &a;
 
     s = ft_convert_hexa_lower(b);
     
