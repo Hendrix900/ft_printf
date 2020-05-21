@@ -6,29 +6,24 @@
 /*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 01:09:36 by ccastill          #+#    #+#             */
-/*   Updated: 2020/05/06 19:14:47 by carlos           ###   ########.fr       */
+/*   Updated: 2020/05/21 20:44:11 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		check_flags(const char *s, t_list_printf *next)
+int check_str(const char *s, t_list_printf *next)
 {
 	next->flags = 0;
 	next->width = 0;
-	next->precision = 0;
-	next->type = 0;
+	next->punt = 0;
 	next->flags = ft_flags(s, next);
-	printf("El flag es: %d\n", next->flags);
-	next->width = ft_width(s, next->flags, next);
-	printf("El ancho es: %d\n", next->width);
-	//next->precision
+	next->punt = ft_punt(s, next);
+	next->width = ft_width(s, next);
 
-	
-	//next->widht = ft_width(s, next);
-	return (0);
+   return (0);
 }
-  
+
  void str_printf(const char *s, t_list_printf *next)
  {
 	 int	err;
@@ -47,14 +42,14 @@ int		check_flags(const char *s, t_list_printf *next)
 			if (s[next->len] == '\0')
 				break;
 			else
-				err = check_flags(s, next);
+				err = check_str(s, next);
 			if (err == -1)
 				break;
 		}
 	next->len++;
 	}
  }
-  
+ 
  int	ft_printf(const char *s, ...)
  {
 	t_list_printf	*next;
@@ -65,15 +60,7 @@ int		check_flags(const char *s, t_list_printf *next)
 	next->len = 0;
 	str_printf(s,next);
 	va_end(next->args);
+	free(next);
+	next = NULL;
 	return (0);
  }
-
-int main()
-{
-	int a;
-	a = 58465;
-
-	ft_printf("%d*\n", 0, a);
-	//printf("Hola %-05i  cojo %.18i\n", a, 0);
-}
-

@@ -6,7 +6,7 @@
 /*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 05:58:42 by ccastill          #+#    #+#             */
-/*   Updated: 2020/05/06 19:25:43 by carlos           ###   ########.fr       */
+/*   Updated: 2020/05/21 18:33:19 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main()
 //---------------------------Espacios----------------------
 	printf("Espacios\n"); 
 
-	printf("%3d\n", a); 
+	printf("%2d\n", a); 
 	printf("% 3d\n", a); // Puede haber UN espacio antes de los flags.
 	printf("%12d\n", a);
 	printf("%120d\n", a);
@@ -29,7 +29,7 @@ int main()
 //--------------------------Zeros------------------------
 	printf("Zeros\n"); 
 
-	printf("%04d\n", a); 
+	printf("%03d\n", a); 
 	printf("% 05d\n", a); // 
 	printf("%012d\n", a);
 	printf("%0120d\n", a);
@@ -39,16 +39,16 @@ int main()
 
 	printf("%-5d", a); // 5 Espacios a la derecha
 	printf("%- 5d", a); // 5 espacios a partir del -
-	printf("% -5d", a); // Igual que la de arriba.
+	printf("% -5d\n", a); // Igual que la de arriba.
 
 //--------------------Precision-----------------------------
 	printf("Precision\n"); 
 
-	printf("%.3d\n",a); // Es igual AL SIGUEINTE
-	printf("%.03d\n", a);  // Es igual AL ANTERIOR
+	printf("%.1d\n",a); // Es igual AL SIGUEINTE
+	printf("%04d\n", a);  // Es igual AL ANTERIOR
 	printf("%.4d\n",a); // Si el número que se da es mayor que la cantidad de digitos de la variable, se añaden zeros a la izq
-	printf("%.04d\n",a); // Zeros despues de punto es indiferente.
-	printf("%.2s\n", b); //El número indicado será la máxima extensión de la cadena
+	printf("%.5d\n",a); // Zeros despues de punto es indiferente.
+	printf("%.s\n",b); //El número indicado será la máxima extensión de la cadena
 	printf("% .d\n", 0); // Si se pasa 0 no pasará nada NULL
 
 //---------------------Width-----------------------------
@@ -57,7 +57,7 @@ int main()
 	printf("%*d\n",12, a); 
 	printf("% *d\n",12, a); // Puede haber UN espacio antes de los flags.
 	
-	printf("%*.3d\n",5,a); // Es igual AL SIGUEINTE
+	printf("%*.5d\n",5,a); // Es igual AL SIGUEINTE
 	printf("%*.03d\n",5 , a);  // Es igual AL ANTERIOR
 	printf("%*.4d\n",5 ,a); // Si el número que se da es mayor que la cantidad de digitos de la variable, se añaden zeros a la izq
 	printf("%*.04d\n",5 , a); // Zeros despues de punto es indiferente.

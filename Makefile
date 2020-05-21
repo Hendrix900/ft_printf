@@ -3,18 +3,18 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ccastill <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: carlos <carlos@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/19 06:55:26 by ccastill          #+#    #+#              #
-#    Updated: 2020/02/19 06:55:26 by ccastill         ###   ########.fr        #
+#    Updated: 2020/05/21 20:01:42 by carlos           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
-FUN_PRINTF = ft_printf.c ft_flags.c ft_width.c ft_spaces.c ft_zeros.c
+FUN_PRINTF = ft_printf.c ft_flags.c ft_width.c ft_spaces.c ft_zeros.c ft_punt.c main.c
 
-OBJS_PRINTF = ft_printf.o ft_flags.o ft_width.o ft_spaces.o ft_zeros.o
+OBJS_PRINTF = ft_printf.o ft_flags.o ft_width.o ft_spaces.o ft_zeros.o ft_punt.o main.o
 
 FUN_LIBFT = ./libft/ft_atoi.c ./libft/ft_substr.c ./libft/ft_strlen.c ./libft/ft_putchar_fd.c \
 			

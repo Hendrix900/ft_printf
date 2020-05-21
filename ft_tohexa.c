@@ -6,7 +6,7 @@
 /*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 08:10:18 by ccastill          #+#    #+#             */
-/*   Updated: 2020/05/11 20:41:32 by carlos           ###   ########.fr       */
+/*   Updated: 2020/05/12 23:26:39 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int main()
 	char *s;
 	char *memory;
 
-	long int a = 158456;
+	long int a = 0;
 	
 	s = ft_tohexa(a, 'X');
 	

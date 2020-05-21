@@ -3,58 +3,48 @@
 /*                                                        :::      ::::::::   */
 /*   ft_width.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 05:50:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/02/19 05:50:04 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/05/21 20:42:02 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	ft_strlen_printf(const char *s, int l)
+size_t	ft_strlen_str(const char *s, t_list_printf *next)
 {
-	size_t q;
-
-	q = 0;
-	while (s[l] >= '0' && s[l] <= '9')
+	size_t count;
+	
+	while (s[next->len] >= '0' && s[next->len] <= '9')
 	{
-		q++;
-		l++;
+		count++;
+		next->len++;		
 	}
-	return (q);
+ return (count);
 }
 
-void	ft_axterix(t_list_printf *next)
+int		ft_conver_width(const char *s, t_list_printf *next)
 {
-	next->width = va_arg(next->args, int);
-	if (next->width < 0)
-	{
-		next->width *= -1;
-		next->neg = 1;
-	}
-	next->len++;
+	char *new;
+	int n;
+	new = ft_substr(s,next->len,ft_strlen_str(s, next));
+	next->len += ft_strlen_str(s, next);
+	n = ft_atoi(new);
+	free(new);
+	new = NULL;
+	return (n);
 }
 
-int		ft_width(const char *s, int f, t_list_printf *next)
+int		ft_width(const char *s, t_list_printf *next)
 {
-	char	*temp;
-	size_t	len;
-
-	next->neg = 0;
-	if (f == '-' || f == '0' || f == '.' || f == 1 || f == '*')
-	{
-		if (s[next->len] >= '0' && s[next->len] <= '9')
-		{
-			temp = ft_substr(s, next->len,
-					(len = ft_strlen_printf(s, next->len)));
-			next->width = ft_atoi(temp);
-			free(temp);
-			temp = NULL;
-			next->len += len;
-		}
-		else if (f == '*')
-			ft_axterix(next); 
-	}
-	return (next->width);
+	int count;
+	
+	if (next->flags == '0' || next->flags == 1 || next->flags == '-')
+		next->width = ft_conver_width(s, next);
+	if (next->punt == '.')
+		next->precision = ft_conver_width(s, next);
+	if (next->punt == '*')
+		next->width = ft_conver_width(s, next);
+	return (0);
 }
