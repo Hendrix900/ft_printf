@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: carlos <carlos@student.42.fr>              +#+  +:+       +#+         #
+#    By: ccastill <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/19 06:55:26 by ccastill          #+#    #+#              #
-#    Updated: 2020/05/21 20:01:42 by carlos           ###   ########.fr        #
+#    Updated: 2020/05/22 12:15:42 by ccastill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ FUN_LIBFT = ./libft/ft_atoi.c ./libft/ft_substr.c ./libft/ft_strlen.c ./libft/ft
 OBJS_LIBFT = ./libft/ft_atoi.o ./libft/ft_substr.o ./libft/ft_strlen.o ./libft/ft_putchar_fd.o \
 		
 
-CFLAGS = -c -I -Wall -Wextra -Werror
+CFLAGS = -c -I -Wall -Wextra -Werror -g # Quitar la -g
 
 all: $(NAME) # Regla principal. Al ejecutar Make se ejecutará.
 
