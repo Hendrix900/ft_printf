@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 21:55:45 by ccastill          #+#    #+#             */
-/*   Updated: 2020/05/21 19:47:45 by carlos           ###   ########.fr       */
+/*   Updated: 2020/05/22 13:10:16 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdio.h>
 # include <stdarg.h>
 # include <stdlib.h>
-# include "./libft/libft.h" 
+# include "./libft/libft.h"
 
 typedef struct		s_list_printf
 {
@@ -35,9 +35,8 @@ typedef struct		s_list_printf
 	int				hexa; // %xX hexadecimal
 	int				p; // %p puntero (Dirección de memoria)
 	unsigned int	u; // %u Entero sin sígno.
-	
-}					t_list_printf;
 
+}					t_list_printf;
 
  int				ft_printf(const char *s, ...);
  int				ft_flags(const char *s, t_list_printf *next);

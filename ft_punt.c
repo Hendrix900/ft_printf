@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_punt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/21 18:59:25 by carlos            #+#    #+#             */
-/*   Updated: 2020/05/21 19:37:39 by carlos           ###   ########.fr       */
+/*   Created: 2020/05/22 13:33:28 by ccastill          #+#    #+#             */
+/*   Updated: 2020/05/22 14:29:52 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int     ft_punt(const char *s, t_list_printf *next)
+int	ft_punt(const char *s, t_list_printf *next)
 {
 	if (s[next->len] == '.')
 	{

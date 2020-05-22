@@ -3,38 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 01:09:36 by ccastill          #+#    #+#             */
-/*   Updated: 2020/05/21 20:44:11 by carlos           ###   ########.fr       */
+/*   Updated: 2020/05/22 14:34:29 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int check_str(const char *s, t_list_printf *next)
+int	check_str(const char *s, t_list_printf *next)
 {
-	next->flags = 0;
-	next->width = 0;
-	next->punt = 0;
-	next->flags = ft_flags(s, next);
-	next->punt = ft_punt(s, next);
-	next->width = ft_width(s, next);
-
+		next->flags = 0;
+		next->width = 0;
+		next->punt = 0;
+		next->flags = ft_flags(s, next);
+		next->punt = ft_punt(s, next);
+		next->width = ft_width(s, next);
    return (0);
 }
 
  void str_printf(const char *s, t_list_printf *next)
- {
+{
 	 int	err;
 
 	 while (s[next->len] != '\0')
-	{	
+	{
 	  	if (s[next->len] != '%')
-		{	
+		{
 		  	write(1, &s[next->len], 1);
 		}
-		else 
+		else
 		{
 			next->len++;
 			while (s[next->len] == ' ')
@@ -49,7 +48,7 @@ int check_str(const char *s, t_list_printf *next)
 	next->len++;
 	}
  }
- 
+
  int	ft_printf(const char *s, ...)
  {
 	t_list_printf	*next;

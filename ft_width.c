@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 05:50:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/05/22 12:18:55 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/05/22 13:01:33 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 size_t	ft_strlen_str(const char *s, int l)
 {
 	size_t count;
-	
-	count = 0;	
+
+	count = 0;
 	while (s[l] >= '0' && s[l] <= '9')
 	{
 		count++;
-		l++;		
+		l++;
 	}
  return (count);
 }
@@ -28,11 +28,11 @@ size_t	ft_strlen_str(const char *s, int l)
 int		ft_asterisk(const char *s, t_list_printf *next)
 {
 	int width;
-	
+
 	width = 0;
 	width = va_arg(next->args, int);
 	return (width);
-	
+
 }
 
 int		ft_conver_width(const char *s, t_list_printf *next)
@@ -50,7 +50,7 @@ int		ft_conver_width(const char *s, t_list_printf *next)
 int		ft_width(const char *s, t_list_printf *next)
 {
 	int count;
-	
+
 	if (next->flags == '0' || next->flags == 1 || next->flags == '-')
 		next->width = ft_conver_width(s, next);
 	if (next->flags == '*')
