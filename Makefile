@@ -6,22 +6,20 @@
 #    By: ccastill <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/19 06:55:26 by ccastill          #+#    #+#              #
-#    Updated: 2020/05/22 12:15:42 by ccastill         ###   ########.fr        #
+#    Updated: 2020/07/09 00:46:18 by ccastill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
-FUN_PRINTF = ft_printf.c ft_flags.c ft_width.c ft_spaces.c ft_zeros.c ft_punt.c main.c
+FUN_PRINTF = ft_printf.c ft_flags.c ft_width.c ft_spaces.c ft_zeros.c ft_punt.c main.c ft_type.c ft_show_d.c ft_putspace.c ft_putzero.c ft_putspace_zero.c  \
 
-OBJS_PRINTF = ft_printf.o ft_flags.o ft_width.o ft_spaces.o ft_zeros.o ft_punt.o main.o
+OBJS_PRINTF = ft_printf.o ft_flags.o ft_width.o ft_spaces.o ft_zeros.o ft_punt.o main.o ft_type.o ft_show_d.o ft_putspace.o ft_putzero.o ft_putspace_zero.o \
 
-FUN_LIBFT = ./libft/ft_atoi.c ./libft/ft_substr.c ./libft/ft_strlen.c ./libft/ft_putchar_fd.c \
+FUN_LIBFT = ./libft/ft_atoi.c ./libft/ft_itoa.c ./libft/ft_substr.c ./libft/ft_strlen.c ./libft/ft_putchar_fd.c ./libft/ft_putstr_fd.c \
 			
-
-OBJS_LIBFT = ./libft/ft_atoi.o ./libft/ft_substr.o ./libft/ft_strlen.o ./libft/ft_putchar_fd.o \
+OBJS_LIBFT = ./libft/ft_atoi.o ./libft/ft_itoa.o ./libft/ft_substr.o ./libft/ft_strlen.o ./libft/ft_putchar_fd.o ./libft/ft_putstr_fd.o \
 		
-
 CFLAGS = -c -I -Wall -Wextra -Werror -g # Quitar la -g
 
 all: $(NAME) # Regla principal. Al ejecutar Make se ejecutará.

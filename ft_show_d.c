@@ -1,0 +1,40 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_show_d.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/08 19:13:24 by ccastill          #+#    #+#             */
+/*   Updated: 2020/07/09 00:51:19 by ccastill         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_printf.h"
+
+int	ft_show_d (const char *s, t_list_printf *next)
+{
+	char *new;
+	int d;
+	size_t l;
+
+	d = 0;
+	new = ft_itoa(next->i);
+	//printf("la cadena new es : %s\n", new);
+	l = ft_strlen(new);
+
+	if (next->flags == 1 || next->flags == '-' || next->flags == '*' && next->punt != '.')
+	{
+		ft_putspace(s, next);
+	}
+	else if (next->flags == '0' || next->punt == '.' && next->flags != '*')
+		ft_putzero(s, next);
+	else if (next->flags = '*' && next->punt == '.')
+	{
+		ft_putspace_zero(s, next);
+	}
+	else 
+	ft_putstr_fd(new,1);
+
+	return (0);
+}

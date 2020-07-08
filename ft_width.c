@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 05:50:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/05/22 13:01:33 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/08 18:54:03 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_strlen_str(const char *s, int l)
 		count++;
 		l++;
 	}
- return (count);
+	return (count);
 }
 
 int		ft_asterisk(const char *s, t_list_printf *next)
@@ -32,7 +32,6 @@ int		ft_asterisk(const char *s, t_list_printf *next)
 	width = 0;
 	width = va_arg(next->args, int);
 	return (width);
-
 }
 
 int		ft_conver_width(const char *s, t_list_printf *next)
@@ -57,5 +56,5 @@ int		ft_width(const char *s, t_list_printf *next)
 		next->width = ft_asterisk(s, next);
 	if (next->punt == '.')
 		next->precision = ft_conver_width(s, next);
-	return (0);
+	return (next->width);
 }

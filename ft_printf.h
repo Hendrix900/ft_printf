@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 21:55:45 by ccastill          #+#    #+#             */
-/*   Updated: 2020/05/22 13:10:16 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 00:45:59 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,11 @@ typedef struct		s_list_printf
  void				ft_zeros(int n, t_list_printf *next);
  void				ft_spaces(int n, t_list_printf *next);
  int				ft_punt(const char *s, t_list_printf *next);
+ int				ft_type(const char *s, t_list_printf *next);
+ int				ft_show_d(const char *s, t_list_printf *next);
+ void				ft_putspace(const char *s, t_list_printf *next);
+ void				ft_putzero(const char *s, t_list_printf *next);
+ void				ft_putspace_zero (const char *s, t_list_printf *next);
+
 
 #endif

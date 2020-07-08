@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_type.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/21 15:51:46 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/08 19:37:37 by ccastill         ###   ########.fr       */
+/*   Created: 2020/07/08 18:11:44 by ccastill          #+#    #+#             */
+/*   Updated: 2020/07/08 19:18:01 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	ft_putnbr_fd(int n, int fd)
+int	ft_type (const char *s, t_list_printf *next)
 {
-	unsigned int a;
-
-	a = 0;
-	if (n >= 0)
-		a = n;
-	if (n < 0)
+	if (s[next->len] == 'd' || s[next->len] == 'i')
 	{
-		a = n * -1;
-		ft_putchar_fd('-', fd);
+		next->i = va_arg(next->args, int);
+		return ('d');
 	}
-	if (a >= 10)
+	else //COntinuar añadiendo tipos, este es un ejemplo de prueba sólo.
 	{
-		ft_putnbr_fd(a / 10, fd);
+			return ('q');
 	}
-	ft_putchar_fd((a % 10) + '0', fd);
+	
 }

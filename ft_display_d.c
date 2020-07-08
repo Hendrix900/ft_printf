@@ -3,11 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_display_d.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/21 13:10:48 by carlos            #+#    #+#             */
-/*   Updated: 2020/05/21 13:11:05 by carlos           ###   ########.fr       */
+/*   Updated: 2020/07/07 19:14:03 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-ft_display_d()
+#include "ft_printf.h"
+
+ft_display_d(const char *s, t_list_printf *next)
+{
+
+
+
+
+	
+}
