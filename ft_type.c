@@ -6,13 +6,13 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 18:11:44 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 04:54:37 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 05:35:21 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_type (const char *s, t_list_printf *next)
+int	ft_type(const char *s, t_list_printf *next)
 {
 	if (s[next->len] == 'd' || s[next->len] == 'i')
 		return ('d');
@@ -22,8 +22,8 @@ int	ft_type (const char *s, t_list_printf *next)
 		return ('%');
 	else if (s[next->len] == 's')
 		return ('s');
-	else if (s[next->len] == 'x' || s[next->len] == 'X' )
+	else if (s[next->len] == 'x' || s[next->len] == 'X')
 		return ('x');
-//	else if (s[next->len] == 'c')
-return (0);
+	//	else if (s[next->len] == 'c')
+	return (0);
 }

@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_convert_memory.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 07:29:05 by ccastill          #+#    #+#             */
-/*   Updated: 2020/05/11 18:20:04 by carlos           ###   ########.fr       */
+/*   Updated: 2020/07/09 05:31:53 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int        ft_memory_len(long int n)
+int ft_memory_len(long int n)
 {
     long int nb;
     int l;
 
-    nb = n;    
+    nb = n;
     l = 0;
     if (n == 0)
         l++;
@@ -30,7 +30,7 @@ int        ft_memory_len(long int n)
     return (l);
 }
 
-char     *ft_convert_hexa_lower(long int n)
+char *ft_convert_hexa_lower(long int n)
 {
     char *s;
     int l;
@@ -65,8 +65,7 @@ int main()
     int *b = &a;
 
     s = ft_convert_hexa_lower(b);
-    
+
     printf("El número hexadecimal es : %s\n", s);
     printf("El número hexadecimal es : %p\n", b);
-
 }

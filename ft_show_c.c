@@ -6,15 +6,16 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 02:16:52 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 05:21:43 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 05:34:31 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_show_c (t_list_printf *next)
+void ft_show_c(t_list_printf *next)
 {
 	char new[1];
+	
 	new[0] = next->c;
 	new[1] = '\0';
 	if (next->type == '%')
@@ -25,6 +26,6 @@ void	ft_show_c (t_list_printf *next)
 		ft_putzero(new, next);
 	else if ((next->flags == '*' && next->punt == '.'))
 		ft_putspace_zero(new, next);
-	else 
-	ft_putstr_fd(new,1);
+	else
+		ft_putstr_fd(new, 1);
 }

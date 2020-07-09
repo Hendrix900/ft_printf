@@ -6,19 +6,19 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/17 16:18:16 by ccastill          #+#    #+#             */
-/*   Updated: 2020/02/17 16:18:16 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 05:31:10 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int		ft_convert_len(int n)
+int ft_convert_len(int n)
 {
 	unsigned long int nb;
 	int l;
 
-	nb = n;	
+	nb = n;
 	l = 0;
 	if (n == 0)
 		l++;
@@ -30,7 +30,7 @@ int		ft_convert_len(int n)
 	return (l);
 }
 
-char 	*ft_convert_hexa_lower(int n)
+char *ft_convert_hexa_lower(int n)
 {
 	char *s;
 	int l;
@@ -53,7 +53,7 @@ char 	*ft_convert_hexa_lower(int n)
 	return (s);
 }
 
-char 	*ft_convert_hexa_upper(int n)
+char *ft_convert_hexa_upper(int n)
 {
 	char *s;
 	int l;
@@ -83,8 +83,7 @@ int main()
 	char *s;
 
 	s = ft_convert_hexa_lower(b);
-	
+
 	printf("El número hexadecimal es : %s\n", s);
 	printf("El número hexadecimal es : %X\n", b);
-
 }

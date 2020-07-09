@@ -6,13 +6,13 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 05:50:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 04:49:37 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 05:35:50 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	ft_strlen_str(const char *s, int l)
+size_t ft_strlen_str(const char *s, int l)
 {
 	size_t count;
 
@@ -25,7 +25,7 @@ size_t	ft_strlen_str(const char *s, int l)
 	return (count);
 }
 
-int		ft_asterisk(t_list_printf *next)
+int ft_asterisk(t_list_printf *next)
 {
 	int width;
 
@@ -34,10 +34,11 @@ int		ft_asterisk(t_list_printf *next)
 	return (width);
 }
 
-int		ft_conver_width(const char *s, t_list_printf *next)
+int	ft_conver_width(const char *s, t_list_printf *next)
 {
-	char *new;
-	int n;
+	char	*new;
+	int		n;
+	
 	new = ft_substr(s, next->len, (ft_strlen_str(s, next->len)));
 	next->len += ft_strlen_str(s, next->len);
 	n = ft_atoi(new);
@@ -46,7 +47,7 @@ int		ft_conver_width(const char *s, t_list_printf *next)
 	return (n);
 }
 
-int		ft_width(const char *s, t_list_printf *next)
+int	ft_width(const char *s, t_list_printf *next)
 {
 	int count;
 

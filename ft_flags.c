@@ -6,13 +6,13 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 11:59:24 by ccastill          #+#    #+#             */
-/*   Updated: 2020/05/22 14:10:36 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 05:31:46 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_flags(const char *s, t_list_printf *next)
+int	ft_flags(const char *s, t_list_printf *next)
 {
 	if (s[next->len] == '-')
 	{

@@ -6,14 +6,13 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 08:10:18 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 03:59:30 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 05:35:12 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*#include <stdio.h>
 #include <stdlib.h>*/
 #include "ft_printf.h"
-
 
 char	*ft_tohexa(unsigned long int nb, char x)
 {
