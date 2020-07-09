@@ -6,13 +6,13 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 20:32:15 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 03:26:15 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 05:04:47 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void ft_putspace_left (char *new, const char *s, t_list_printf *next)
+void ft_putspace_left (char *new, t_list_printf *next)
 {
 		size_t width;
 		size_t variable;
@@ -38,7 +38,7 @@ void ft_putspace_left (char *new, const char *s, t_list_printf *next)
 			}
 }
 
-void ft_putspace_right (char *new, const char *s, t_list_printf *next)
+void ft_putspace_right (char *new, t_list_printf *next)
 {
 	size_t width;
 	size_t variable;
@@ -62,10 +62,10 @@ void ft_putspace_right (char *new, const char *s, t_list_printf *next)
 		}	
 }
 
-void ft_putspace (char *new, const char *s, t_list_printf *next)
+void ft_putspace (char *new, t_list_printf *next)
 {
 	if (next->flags == '-')
-		ft_putspace_right(new, s, next);
+		ft_putspace_right(new, next);
 	else
-		ft_putspace_left(new, s,next);
+		ft_putspace_left(new, next);
 }

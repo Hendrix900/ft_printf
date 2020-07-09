@@ -6,13 +6,13 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 08:40:29 by ccastill          #+#    #+#             */
-/*   Updated: 2020/05/22 14:04:41 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 04:51:05 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_spaces(int n, t_list_printf *next)
+void	ft_spaces(int n)
 {
 	while (n > 0)
 	{

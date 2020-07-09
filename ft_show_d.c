@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 19:13:24 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 03:47:48 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 05:07:15 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ void	ft_show_d (const char *s, t_list_printf *next)
 	new = ft_itoa(next->i);
 	l = ft_strlen(new);
 
-	if (next->flags == 1 || next->flags == '-' || next->flags == '*' && next->punt != '.')
-		ft_putspace(new, s, next);
-	else if (next->flags == '0' || next->punt == '.' && next->flags != '*')
+	if ((next->flags == 1) || (next->flags == '-') || (next->flags == '*' && next->punt != '.'))
+		ft_putspace(new, next);
+	else if ((next->flags == '0') || (next->punt == '.' && next->flags != '*'))
 		ft_putzero(new, s, next);
-	else if (next->flags = '*' && next->punt == '.')
+	else if ((next->flags == '*' && next->punt == '.'))
 		ft_putspace_zero(new, s, next);
 	else 
 	ft_putstr_fd(new,1);
