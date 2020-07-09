@@ -6,13 +6,13 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/21 15:07:12 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/21 15:42:58 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 06:49:12 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd, t_list_printf  *next)
 {
 	int l;
 
@@ -22,5 +22,6 @@ void	ft_putstr_fd(char *s, int fd)
 		{
 			ft_putchar_fd(s[l], fd);
 			l++;
+			next->br++;
 		}
 }

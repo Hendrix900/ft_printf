@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 23:34:09 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 05:40:57 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 06:52:13 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_putzero_precision(char *new, t_list_printf *next)
 	width = next->precision;
 	variable = ft_strlen(new);
 	if (variable >= width)
-		ft_putstr_fd(new, 1);
+		ft_putstr_fd(new, 1, next);
 	else if (variable < width)
 	{
 		total = width - variable;
@@ -29,8 +29,10 @@ void	ft_putzero_precision(char *new, t_list_printf *next)
 		{
 			ft_putchar_fd('0', 1);
 			total--;
+			next->br++;
+
 		}
-		ft_putstr_fd(new, 1);
+		ft_putstr_fd(new, 1, next);
 	}
 }
 
@@ -43,7 +45,7 @@ void	ft_putzero_0(char *new, t_list_printf *next)
 	width = next->width;
 	variable = ft_strlen(new);
 	if (variable >= width)
-		ft_putstr_fd(new, 1);
+		ft_putstr_fd(new, 1, next);
 	else if (variable < width)
 	{
 		total = width - variable;
@@ -51,8 +53,10 @@ void	ft_putzero_0(char *new, t_list_printf *next)
 		{
 			ft_putchar_fd('0', 1);
 			total--;
+			next->br++;
+
 		}
-		ft_putstr_fd(new, 1);
+		ft_putstr_fd(new, 1, next);
 	}
 }
 

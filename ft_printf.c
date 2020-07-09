@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 01:09:36 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 05:32:03 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 06:38:17 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ void str_printf(const char *s, t_list_printf *next)
 		if (s[next->len] != '%')
 		{
 			write(1, &s[next->len], 1);
+			next->br++;
 		}
 		else
 		{
@@ -63,14 +64,18 @@ void str_printf(const char *s, t_list_printf *next)
 int ft_printf(const char *s, ...)
 {
 	t_list_printf *next;
+	int				br;
 
 	if (!(next = malloc(sizeof(t_list_printf))))
 		return (0);
 	va_start(next->args, s);
 	next->len = 0;
+	next->br = 0;
+	br = 0;
 	str_printf(s, next);
+	br += next->br;
 	va_end(next->args);
 	free(next);
 	next = NULL;
-	return (0);
+	return (br);
 }
