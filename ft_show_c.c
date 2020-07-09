@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 02:16:52 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 05:34:31 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 05:43:33 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ void ft_show_c(t_list_printf *next)
 	new[1] = '\0';
 	if (next->type == '%')
 		ft_putchar_fd('%', 1);
-	if ((next->flags == 1) || (next->flags == '-') || (next->flags == '*' && next->punt != '.'))
+	if ((next->flags == 1) || (next->flags == '-') || (next->flags == '*' 
+		&& next->punt != '.'))
 		ft_putspace(new, next);
 	else if ((next->flags == '0') || (next->punt == '.' && next->flags != '*'))
 		ft_putzero(new, next);

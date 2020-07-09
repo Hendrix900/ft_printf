@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 05:50:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 05:35:50 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 05:41:52 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ size_t ft_strlen_str(const char *s, int l)
 	return (count);
 }
 
-int ft_asterisk(t_list_printf *next)
+int	ft_asterisk(t_list_printf *next)
 {
 	int width;
 
