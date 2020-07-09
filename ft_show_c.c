@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_show_c.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 02:16:52 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 07:31:53 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/10 00:19:19 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void ft_show_c(t_list_printf *next)
 	
 	new[0] = next->c;
 	new[1] = '\0';
-	if (next->len == '%') // Cambiar por next->type 
-		ft_putchar_fd('%', 1); 
+//	if (next->type == '%') // Cambiar por next->type 
+//		ft_putchar_fd('%', 1); 
 		next->br++;
 	if ((next->flags == 1) || (next->flags == '-') || (next->flags == '*' 
 		&& next->punt != '.'))

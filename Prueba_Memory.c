@@ -6,7 +6,7 @@
 /*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 08:10:18 by ccastill          #+#    #+#             */
-/*   Updated: 2020/05/11 20:01:47 by carlos           ###   ########.fr       */
+/*   Updated: 2020/07/10 00:10:30 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ int main()
 	char *s;
 	char *memory;
 
-	int a = 158456;
+	int a = 325;
 
 	memory = ft_memory(a);
 	printf("La dirección de memoria es: %s\n", memory);
-	printf("La dirección de memoria es: %p\n", a);
+	printf("La dirección de memoria es: %p\n", &a);
 
 }
 
