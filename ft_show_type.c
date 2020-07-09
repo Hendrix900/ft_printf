@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_show_type.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 02:22:16 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 05:34:38 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 23:15:54 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void ft_show_type(t_list_printf *next)
+void ft_show_type(const char *s, t_list_printf *next)
 {
 	if (next->type == 'd' || next->type == 'i')
 	{
@@ -34,6 +34,6 @@ void ft_show_type(t_list_printf *next)
 	else if (next->type == 'x')
 	{
 		next->hexa = va_arg(next->args, int);
-		ft_show_hexa(next);
+		ft_show_hexa(s,next);
 	}
 }

@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_show_hexa.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 03:56:58 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 06:55:58 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 23:12:21 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void ft_show_hexa(t_list_printf *next)
+void ft_show_hexa(const char *s , t_list_printf *next)
 {
 	char *new;
 
-	new = ft_tohexa(next->hexa, next->len);
+	new = ft_tohexa(next->hexa, s[next->len]);
 	if ((next->flags == 1) || (next->flags == '-') || (next->flags == '*' 
 		&& next->punt != '.'))
 		ft_putspace(new, next);

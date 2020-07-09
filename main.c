@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/21 19:48:56 by carlos            #+#    #+#             */
-/*   Updated: 2020/07/09 07:26:48 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 23:18:51 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 int main ()
 {
-    int a = 983215;
+    int a = -983215;
     char *c = "EL PEPINO DEL ALBERCHE TIENE SED";
     int f;
     int g;
@@ -33,9 +33,6 @@ int main ()
 
     printf("%d\n", f);
     printf("%d\n", g);
-
-    f = ft_printf("%.7s", "hello");
-    printf("%d\n", f);
 
     return(0);
 

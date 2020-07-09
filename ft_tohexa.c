@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tohexa.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 08:10:18 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 05:35:12 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 23:21:52 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,11 @@ int main()
 	char *s;
 	char *memory;
 
-	long int a = 0;
+	long int a = -58658746;
 	
 	s = ft_tohexa(a, 'X');
 	
-	printf("El número hexadecimal es : %s\n", s);
-	printf("El número hexadecimal es : %lX\n", a);
+	printf("Mi función es : %s\n", s);
+	printf("  Original es : %lX\n", a);
 }
 */

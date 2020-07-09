@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 01:09:36 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 06:38:17 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 23:16:37 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int check_str(const char *s, t_list_printf *next)
 	if (next->type == 0)
 		return (-1);
 	else
-		ft_show_type(next);
+		ft_show_type(s, next);
 	//printf("El ancho es : %d\n", next->width);//
 	//printf("la posición es: %d\n", next->len); //
 	//printf("El valor de type es : %c\n", next->type);//
