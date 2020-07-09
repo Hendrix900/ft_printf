@@ -6,7 +6,7 @@
 /*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/21 19:48:56 by carlos            #+#    #+#             */
-/*   Updated: 2020/07/09 23:51:12 by carlos           ###   ########.fr       */
+/*   Updated: 2020/07/09 23:56:07 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 int main ()
 {
-    int a = -98321345;
+    int a = 98321345;
     char *c = "EL PEPINO DEL ALBERCHE TIENE SED";
     int f;
     int g;
