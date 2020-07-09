@@ -6,14 +6,14 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 23:34:09 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 03:26:21 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 05:14:28 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "ft_printf.h"
 
-void ft_putzero_precision (char *new, const char *s, t_list_printf *next)
+void ft_putzero_precision (char *new, t_list_printf *next)
 {
 	size_t width;
 	size_t variable;
@@ -37,7 +37,7 @@ void ft_putzero_precision (char *new, const char *s, t_list_printf *next)
 		}	
 }
 
-void ft_putzero_0 (char *new, const char *s, t_list_printf *next)
+void ft_putzero_0 (char *new, t_list_printf *next)
 {
 	size_t width;
 	size_t variable;
@@ -61,10 +61,10 @@ void ft_putzero_0 (char *new, const char *s, t_list_printf *next)
 		}	
 }
 
-void ft_putzero (char *new, const char *s, t_list_printf *next)
+void ft_putzero (char *new, t_list_printf *next)
 {
 	if (next->flags == '0')
-		ft_putzero_0(new, s, next);
+		ft_putzero_0(new, next);
 	else 
-		ft_putzero_precision(new, s, next);
+		ft_putzero_precision(new, next);
 }

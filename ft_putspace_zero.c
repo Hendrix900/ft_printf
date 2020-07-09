@@ -6,13 +6,13 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 00:21:11 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 03:29:35 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 05:11:23 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void ft_check_precision_asterisk (char *new, const char *s, t_list_printf *next)
+void ft_check_precision_asterisk (char *new, t_list_printf *next)
 {
 	size_t width;
 	size_t precision;
@@ -33,7 +33,7 @@ void ft_check_precision_asterisk (char *new, const char *s, t_list_printf *next)
 	ft_putstr_fd(new,1);
 }
 
-void ft_putspace_zero (char *new, const char *s, t_list_printf *next)
+void ft_putspace_zero (char *new, t_list_printf *next)
 {
 		size_t width;
 		size_t precision;
@@ -47,13 +47,13 @@ void ft_putspace_zero (char *new, const char *s, t_list_printf *next)
 		variable = ft_strlen(new);
 
 		if (width == precision)
-			ft_putzero(new, s, next);
+			ft_putzero(new, next);
 		else if (width > precision)
 		{
 			next->precision = precision - variable;
 			next->width = width - (next->precision + variable);
-			ft_check_precision_asterisk(new, s, next);
+			ft_check_precision_asterisk(new, next);
 		}	
 		else if (precision > width)
-			ft_putzero(new, s, next);
+			ft_putzero(new, next);
 }
