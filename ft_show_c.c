@@ -6,7 +6,7 @@
 /*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 02:16:52 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/10 00:50:30 by carlos           ###   ########.fr       */
+/*   Updated: 2020/07/10 00:53:41 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void ft_show_c(const char *s, t_list_printf *next)
 	}
 	else 
 	{
+		next->br++;
 		new[0] = next->c;
 		new[1] = '\0';
 	}
