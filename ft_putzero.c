@@ -6,22 +6,22 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 23:34:09 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 01:40:11 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 03:26:21 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "ft_printf.h"
 
-void ft_putzero_precision (const char *s, t_list_printf *next)
+void ft_putzero_precision (char *new, const char *s, t_list_printf *next)
 {
 	size_t width;
 	size_t variable;
-	char *new;
+	//char *new;
 	int total;
 	
 	width = next->precision;
-	new = ft_itoa(next->i);
+	//new = ft_itoa(next->i);
 	variable = ft_strlen(new);
 		if (variable >= width)
 			ft_putstr_fd(new,1);
@@ -37,15 +37,15 @@ void ft_putzero_precision (const char *s, t_list_printf *next)
 		}	
 }
 
-void ft_putzero_0 (const char *s, t_list_printf *next)
+void ft_putzero_0 (char *new, const char *s, t_list_printf *next)
 {
 	size_t width;
 	size_t variable;
-	char *new;
+	//char *new;
 	int total;
 	
 	width = next->width;
-	new = ft_itoa(next->i);
+	//new = ft_itoa(next->i);
 	variable = ft_strlen(new);
 		if (variable >= width)
 			ft_putstr_fd(new,1);
@@ -61,10 +61,10 @@ void ft_putzero_0 (const char *s, t_list_printf *next)
 		}	
 }
 
-void ft_putzero (const char *s, t_list_printf *next)
+void ft_putzero (char *new, const char *s, t_list_printf *next)
 {
 	if (next->flags == '0')
-		ft_putzero_0(s, next);
+		ft_putzero_0(new, s, next);
 	else 
-		ft_putzero_precision(s, next);
+		ft_putzero_precision(new, s, next);
 }

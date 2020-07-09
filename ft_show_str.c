@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_type.c                                          :+:      :+:    :+:   */
+/*   ft_show_str.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 18:11:44 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 03:56:09 by ccastill         ###   ########.fr       */
+/*   Created: 2020/07/09 03:43:18 by ccastill          #+#    #+#             */
+/*   Updated: 2020/07/09 03:49:46 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_type (const char *s, t_list_printf *next)
+void	ft_show_str (const char *s, t_list_printf *next)
 {
-	if (s[next->len] == 'd' || s[next->len] == 'i')
-		return ('d');
-	else if (s[next->len] == 'c')
-		return ('c');
-	else if (s[next->len] == '%')
-		return ('%');
-	else if (s[next->len] == 's')
-		return ('s');
-	else if (s[next->len] == 'x' || s[next->len] == 'X' )
-		return ('x');
-//	else if (s[next->len] == 'c')
-
+	char *new;
+	new = next->str;
+	
+	if (next->flags == 1 || next->flags == '-' || next->flags == '*' && next->punt != '.')
+		ft_putspace(new, s, next);
+	else if (next->flags == '0' || next->punt == '.' && next->flags != '*')
+		ft_putzero(new, s, next);
+	else if (next->flags = '*' && next->punt == '.')
+		ft_putspace_zero(new, s, next);
+	else 
+	ft_putstr_fd(new,1);
 }

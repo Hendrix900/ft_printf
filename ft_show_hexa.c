@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_show_d.c                                        :+:      :+:    :+:   */
+/*   ft_show_hexa.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 19:13:24 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 03:47:48 by ccastill         ###   ########.fr       */
+/*   Created: 2020/07/09 03:56:58 by ccastill          #+#    #+#             */
+/*   Updated: 2020/07/09 04:10:00 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_show_d (const char *s, t_list_printf *next)
+void	ft_show_hexa (const char *s, t_list_printf *next)
 {
 	char *new;
-	int d;
-	size_t l;
-
-	d = 0;
-	new = ft_itoa(next->i);
-	l = ft_strlen(new);
+	
+	new = ft_tohexa(next->hexa, next->len);
 
 	if (next->flags == 1 || next->flags == '-' || next->flags == '*' && next->punt != '.')
 		ft_putspace(new, s, next);

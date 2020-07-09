@@ -6,12 +6,14 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 08:10:18 by ccastill          #+#    #+#             */
-/*   Updated: 2020/05/22 14:33:57 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 03:59:30 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+/*#include <stdio.h>
+#include <stdlib.h>*/
+#include "ft_printf.h"
+
 
 char	*ft_tohexa(unsigned long int nb, char x)
 {
@@ -39,7 +41,7 @@ char	*ft_tohexa(unsigned long int nb, char x)
 	}
 	return (new);
 }
-
+/*
 int main()
 {
 	char *s;
@@ -52,3 +54,4 @@ int main()
 	printf("El número hexadecimal es : %s\n", s);
 	printf("El número hexadecimal es : %lX\n", a);
 }
+*/
