@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 21:55:45 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 05:12:58 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 05:18:35 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,14 +45,14 @@ typedef struct		s_list_printf
  void				ft_spaces(int n);
  int				ft_punt(const char *s, t_list_printf *next);
  int				ft_type(const char *s, t_list_printf *next);
- void				ft_show_d(const char *s, t_list_printf *next);
+ void				ft_show_d(t_list_printf *next);
  void				ft_putspace(char *new, t_list_printf *next);
  void 				ft_putzero(char *new, t_list_printf *next);
  void				ft_putspace_zero(char *new, t_list_printf *next);
- void				ft_show_c(const char *s, t_list_printf *next);
- void				ft_show_type(const char *s, t_list_printf *next);
- void				ft_show_str(const char *s, t_list_printf *next);
- void				ft_show_hexa(const char *s, t_list_printf *next);
+ void				ft_show_c(t_list_printf *next);
+ void				ft_show_type(t_list_printf *next);
+ void				ft_show_str(t_list_printf *next);
+ void				ft_show_hexa(t_list_printf *next);
  char				*ft_tohexa(unsigned long int nb, char x);
 
 

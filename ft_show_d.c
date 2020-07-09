@@ -6,13 +6,13 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 19:13:24 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 05:11:51 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 05:16:41 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_show_d (const char *s, t_list_printf *next)
+void	ft_show_d (t_list_printf *next)
 {
 	char *new;
 	int d;

@@ -6,13 +6,13 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 03:56:58 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 05:12:01 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 05:17:32 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_show_hexa (const char *s, t_list_printf *next)
+void	ft_show_hexa (t_list_printf *next)
 {
 	char *new;
 	
