@@ -6,13 +6,13 @@
 /*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 08:10:18 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/10 00:10:30 by carlos           ###   ########.fr       */
+/*   Updated: 2020/07/10 00:24:54 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
-
+/*
 char	*ft_memory(unsigned long int nb);
 
 int main()
@@ -27,7 +27,7 @@ int main()
 	printf("La dirección de memoria es: %p\n", &a);
 
 }
-
+*/
 char	*ft_memory(unsigned long int nb)
 {
 	char				*hex;

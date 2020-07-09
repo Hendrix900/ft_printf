@@ -6,21 +6,21 @@
 /*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 02:16:52 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/10 00:19:19 by carlos           ###   ########.fr       */
+/*   Updated: 2020/07/10 00:31:34 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void ft_show_c(t_list_printf *next)
+void ft_show_c(const char *s, t_list_printf *next)
 {
 	char new[1];
 	
-	new[0] = next->c;
-	new[1] = '\0';
-//	if (next->type == '%') // Cambiar por next->type 
-//		ft_putchar_fd('%', 1); 
-		next->br++;
+	if (next->type == '%') 
+	{
+		new[0] = s[next->len];
+		new[1] = '\0';
+	}
 	if ((next->flags == 1) || (next->flags == '-') || (next->flags == '*' 
 		&& next->punt != '.'))
 		ft_putspace(new, next);
