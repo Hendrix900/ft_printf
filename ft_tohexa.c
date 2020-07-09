@@ -6,7 +6,7 @@
 /*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 08:10:18 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 23:21:52 by carlos           ###   ########.fr       */
+/*   Updated: 2020/07/09 23:50:42 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,17 @@
 #include <stdlib.h>*/
 #include "ft_printf.h"
 
-char	*ft_tohexa(unsigned long int nb, char x)
+char	*ft_tohexa(unsigned int nb, char x)
 {
 	char				*new;
 	char				*hexa;
-	unsigned long int	nbr;
-	unsigned long int	count;
+	unsigned  int		nbr;
+	int	count;
 
 	hexa = (x == 'X') ? "0123456789ABCDEF" : "0123456789abcdef";
 	count = 0;
 	nbr = nb;
+	printf("El unsigned es : %u\n", nbr);
 	while (nb != 0)
 	{
 		count++;

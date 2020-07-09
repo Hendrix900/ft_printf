@@ -6,7 +6,7 @@
 /*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 21:55:45 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 23:16:05 by carlos           ###   ########.fr       */
+/*   Updated: 2020/07/09 23:50:31 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ typedef struct		s_list_printf
  void				ft_show_type(const char *s, t_list_printf *next);
  void				ft_show_str(t_list_printf *next);
  void				ft_show_hexa(const char *s, t_list_printf *next);
- char				*ft_tohexa(unsigned long int nb, char x);
+ char				*ft_tohexa(unsigned int nb, char x);
  void				ft_putstr_fd(char *s, int fd, t_list_printf  *next);
 
 
