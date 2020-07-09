@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/21 19:48:56 by carlos            #+#    #+#             */
-/*   Updated: 2020/07/09 07:17:06 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/09 07:26:48 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int main ()
     printf("%d\n", f);
     printf("%d\n", g);
 
-    f = ft_printf("%%\n");
+    f = ft_printf("%.7s", "hello");
     printf("%d\n", f);
 
     return(0);
