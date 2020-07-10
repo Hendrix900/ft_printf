@@ -6,7 +6,7 @@
 /*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/21 19:48:56 by carlos            #+#    #+#             */
-/*   Updated: 2020/07/10 17:45:19 by carlos           ###   ########.fr       */
+/*   Updated: 2020/07/10 17:49:49 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ int main ()
     //printf("%d\n", f);
     //printf("%d\n", g);
 
-    ft_printf ("%-12.5i casa\n", 43);
-    printf ("%-12.5i casa\n", 43);
+    ft_printf ("%x", 42);
+    printf ("%x", 42);
 
     return(0);
 

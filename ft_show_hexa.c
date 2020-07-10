@@ -6,7 +6,7 @@
 /*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 03:56:58 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/10 17:41:45 by carlos           ###   ########.fr       */
+/*   Updated: 2020/07/10 17:54:25 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,6 @@ void ft_show_hexa(const char *s , t_list_printf *next)
 		ft_putspace(new, next);
 	else if ((next->flags == '0') || (next->punt == '.'))
 		ft_putzero(new, next);
+	else
+		ft_putstr_fd(new, 1, next);
 }
