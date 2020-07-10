@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 23:34:09 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/10 21:34:26 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/10 21:44:22 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ void	ft_putzero_0(char *new, t_list_printf *next)
 	if (next->neg == '-')
 	{
 		ft_putchar_fd('-', 1);
+		next->br++;
 		count = 1;
 	}
 	if (variable >= width && precision < variable)
