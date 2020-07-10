@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 23:34:09 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/11 00:30:45 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/11 00:54:32 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,14 +56,14 @@ void	ft_putzero_0(char *new, t_list_printf *next)
 	precision = next->precision;
 	variable = ft_strlen(new);
 	count = 0;	
-	/*if (next->neg == '-') //añadido recientemente
+	if (next->neg == '-') //añadido recientemente
 	{
 		ft_putchar_fd('-', 1);
 		next->br++;
 		count = 1;
-	}*/
+	}
 	if (variable >= width && precision < variable)
-		ft_putstr_fd(new /*+ count*/, 1, next);
+		ft_putstr_fd(new + count, 1, next);
 	else if ((variable < width) || (precision > variable))
 	{
 		total = precision > 0 ? precision - variable : width - variable;
@@ -73,7 +73,7 @@ void	ft_putzero_0(char *new, t_list_printf *next)
 			total--;
 			next->br++;
 		}
-		ft_putstr_fd(new /*+ count*/, 1, next);
+		ft_putstr_fd(new + count, 1, next);
 	}
 }
 

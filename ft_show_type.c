@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_show_type.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 02:22:16 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/10 01:47:06 by carlos           ###   ########.fr       */
+/*   Updated: 2020/07/11 00:54:00 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void ft_show_type(const char *s, t_list_printf *next)
 {
+	next->neg = 0;
 	if (next->type == 'd' || next->type == 'i')
 	{
 		next->i = va_arg(next->args, int);
