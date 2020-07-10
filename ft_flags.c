@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_flags.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 11:59:24 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/10 06:32:15 by carlos           ###   ########.fr       */
+/*   Updated: 2020/07/10 20:41:41 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,12 @@ int	ft_flags(const char *s, t_list_printf *next)
 	}
 	else if (s[next->len] == '0')
 	{
+		if (s[next->len + 1] == '-')
+		{
+			next->len+= 2;
+			return ('-');
+		}
+		else
 		next->len++;
 		return ('0');
 	}

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_width.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 05:50:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/10 18:43:13 by carlos           ###   ########.fr       */
+/*   Updated: 2020/07/10 20:42:19 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_width(const char *s, t_list_printf *next)
 		next->precision = ft_convert(s, next);
 //	printf("el ancho es : %d\n", next->width);
 //	printf("La precision es : %d\n", next->precision);
-//	printf("LA flag es : %d\n", next->flags);
+//	printf("LA flag es : %c\n", next->flags);
 //	printf("LA PRecision es : %c\n", next->punt);
 	
 	return (next->width);
