@@ -6,7 +6,7 @@
 /*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 23:34:09 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/10 17:43:48 by carlos           ###   ########.fr       */
+/*   Updated: 2020/07/10 18:46:04 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,20 +41,17 @@ void	ft_putzero_0(char *new, t_list_printf *next)
 	size_t	width;
 	size_t	variable;
 	size_t	precision;
-
 	int		total;
-	
 
 	width = next->width;
 	precision = next->precision;
 	variable = ft_strlen(new);
-	
-	if (variable >= width)
+	if (variable >= width && precision < variable)
 		ft_putstr_fd(new, 1, next);
-	else if (variable < width)
+	else if ((variable < width) || (precision > variable))
 	{
 		total = precision > 0 ? precision - variable : width - variable;
-		printf("EL total es : %d\n", total);
+//		printf("EL total es : %d\n", total);
 		/*total = variable > width ? width = 0 :
 		width - variable;*/
 		while (total > 0)
@@ -62,7 +59,6 @@ void	ft_putzero_0(char *new, t_list_printf *next)
 			ft_putchar_fd('0', 1);
 			total--;
 			next->br++;
-
 		}
 		ft_putstr_fd(new, 1, next);
 	}
