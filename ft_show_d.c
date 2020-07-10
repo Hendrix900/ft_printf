@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 19:13:24 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/10 21:38:43 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/10 22:01:22 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void ft_show_d(t_list_printf *next)
 	if (new[0] == '-')
 	{
 		next->neg = '-';
-	//	printf("EL número negativo es : %c\n", next->neg);
+		printf("EL número negativo es : %c\n", next->neg);
 	}
 	if (next->flags >= 1 && next->punt > 1)
 		ft_putspace_zero(new, next);

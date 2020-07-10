@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 23:34:09 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/10 21:44:22 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/10 22:02:37 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,19 @@ void	ft_putzero_precision(char *new, t_list_printf *next)
 	size_t	width;
 	size_t	variable;
 	int		total;
+	int		count;
 
 	width = next->precision;
 	variable = ft_strlen(new);
+	count = 0;
+	if (next->neg == '-')
+	{
+		ft_putchar_fd('-', 1);
+		next->br++;
+		count = 1;
+	}
 	if (variable >= width)
-		ft_putstr_fd(new, 1, next);
+		ft_putstr_fd(new + count, 1, next);
 	else if (variable < width)
 	{
 		total = width - variable;
@@ -48,7 +56,7 @@ void	ft_putzero_0(char *new, t_list_printf *next)
 	precision = next->precision;
 	variable = ft_strlen(new);
 	count = 0;	
-	if (next->neg == '-')
+	if (next->neg == '-') //añadido recientemente
 	{
 		ft_putchar_fd('-', 1);
 		next->br++;
