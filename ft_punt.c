@@ -6,7 +6,7 @@
 /*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/22 13:33:28 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/10 16:25:03 by carlos           ###   ########.fr       */
+/*   Updated: 2020/07/10 16:54:27 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_punt(const char *s, t_list_printf *next)
 {
-	if (next->flags == 1 || next->flags == '-') 
+	if (next->flags == 1 || next->flags == '-' || next->flags == '0') 
 		next->width = ft_convert(s, next);
 	if (s[next->len] == '.')
 	{

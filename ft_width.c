@@ -6,7 +6,7 @@
 /*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 05:50:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/10 16:31:55 by carlos           ###   ########.fr       */
+/*   Updated: 2020/07/10 17:00:43 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_asterisk(t_list_printf *next)
 
 int	ft_width(const char *s, t_list_printf *next)
 {
-	if (next->flags == '0' || (next->flags == '-' && next->punt != '.'))
+	if ((next->flags == '0' && next->punt != '.')|| (next->flags == '-' && next->punt != '.'))
 		next->width = ft_convert(s, next);
 	if (next->flags == '*')
 		next->width = ft_asterisk(next);
