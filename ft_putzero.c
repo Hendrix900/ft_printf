@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putzero.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 23:34:09 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/10 18:46:04 by carlos           ###   ########.fr       */
+/*   Updated: 2020/07/10 21:34:26 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	ft_putzero_precision(char *new, t_list_printf *next)
 			ft_putchar_fd('0', 1);
 			total--;
 			next->br++;
-
 		}
 		ft_putstr_fd(new, 1, next);
 	}
@@ -42,25 +41,30 @@ void	ft_putzero_0(char *new, t_list_printf *next)
 	size_t	variable;
 	size_t	precision;
 	int		total;
+	int count;
+
 
 	width = next->width;
 	precision = next->precision;
 	variable = ft_strlen(new);
+	count = 0;	
+	if (next->neg == '-')
+	{
+		ft_putchar_fd('-', 1);
+		count = 1;
+	}
 	if (variable >= width && precision < variable)
-		ft_putstr_fd(new, 1, next);
+		ft_putstr_fd(new + count, 1, next);
 	else if ((variable < width) || (precision > variable))
 	{
 		total = precision > 0 ? precision - variable : width - variable;
-//		printf("EL total es : %d\n", total);
-		/*total = variable > width ? width = 0 :
-		width - variable;*/
 		while (total > 0)
 		{
 			ft_putchar_fd('0', 1);
 			total--;
 			next->br++;
 		}
-		ft_putstr_fd(new, 1, next);
+		ft_putstr_fd(new + count, 1, next);
 	}
 }
 

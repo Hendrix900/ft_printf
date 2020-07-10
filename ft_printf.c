@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 01:09:36 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/10 18:46:46 by carlos           ###   ########.fr       */
+/*   Updated: 2020/07/10 21:15:25 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ int check_str(const char *s, t_list_printf *next)
 	next->punt = 0;
 	next->type = 0;
 	next->flags = ft_flags(s, next);
-//	printf("La flag es : %d\n", next->flags);//
-
 	next->punt = ft_punt(s, next);
 	next->width = ft_width(s, next);
 	next->type = ft_type(s, next);
