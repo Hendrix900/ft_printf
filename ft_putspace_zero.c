@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 00:21:11 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/10 22:29:28 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/10 22:45:18 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,16 +50,15 @@ void	ft_check_precision_asterisk(char *new, t_list_printf *next)
 		ft_check_precision_minus(new,next);
 	else
 	{
-		if (next->neg == '-')
+		if (next->neg == '-' && width < precision)
 			width--;
-
 		while (width > 0)
 		{
 			ft_putchar_fd(' ', 1);
 			width--;
 			next->br++;
 		}
-		if (next->neg == '-')
+		if (next->neg == '-' && width < precision)
 		{
 			ft_putchar_fd('-', 1);
 			next->br++;
