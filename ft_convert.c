@@ -6,7 +6,7 @@
 /*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/10 04:30:51 by carlos            #+#    #+#             */
-/*   Updated: 2020/07/10 04:39:57 by carlos           ###   ########.fr       */
+/*   Updated: 2020/07/10 17:22:19 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,16 @@ int	ft_convert(const char *s, t_list_printf *next)
 	char	*new;
 	int		n;
 	
-	new = ft_substr(s, next->len, (ft_strlen_str(s, next->len)));
-	next->len += ft_strlen_str(s, next->len);
-	n = ft_atoi(new);
-	free(new);
-	new = NULL;
-	return (n);
+	if (s[next->len] >= '1' && s[next->len] <= '9')
+	{
+		new = ft_substr(s, next->len, (ft_strlen_str(s, next->len)));
+		next->len += ft_strlen_str(s, next->len);
+		n = ft_atoi(new);
+		free(new);
+		new = NULL;
+		return (n);
+	}
+	else
+	return(next->width);
+	
 }

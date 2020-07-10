@@ -6,7 +6,7 @@
 #    By: carlos <carlos@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/19 06:55:26 by ccastill          #+#    #+#              #
-#    Updated: 2020/07/10 17:00:00 by carlos           ###   ########.fr        #
+#    Updated: 2020/07/10 17:03:46 by carlos           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ FUN_LIBFT = ./libft/ft_atoi.c ./libft/ft_itoa.c ./libft/ft_substr.c ./libft/ft_s
 			
 OBJS_LIBFT = ./libft/ft_atoi.o ./libft/ft_itoa.o ./libft/ft_substr.o ./libft/ft_strlen.o ./libft/ft_putchar_fd.o \
 		
-CFLAGS = -c -I -Wall -Wextra -Werror -g # Quitar la -g
+CFLAGS = -c #-I -Wall -Wextra -Werror -g # Quitar la -g
 
 all: $(NAME) # Regla principal. Al ejecutar Make se ejecutará.
 

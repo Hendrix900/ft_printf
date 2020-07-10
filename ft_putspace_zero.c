@@ -6,7 +6,7 @@
 /*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 00:21:11 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/10 16:25:19 by carlos           ###   ########.fr       */
+/*   Updated: 2020/07/10 17:47:00 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,9 +83,9 @@ void ft_putspace_zero(char *new, t_list_printf *next)
 	{
 		next->precision = variable > precision ? precision = 0 :
 		precision - variable;
-		//printf("La precision es : %d\n", next->precision);
+//		printf("L precision es : %d\n", next->precision);
 		next->width = width - (next->precision + variable);
-		//printf("el ancho es : %d\n", next->width);
+//		printf("el ancho es : %d\n", next->width);
 		ft_check_precision_asterisk(new, next);
 	}
 	else if (precision > width)
