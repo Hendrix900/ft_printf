@@ -6,7 +6,7 @@
 /*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/21 19:48:56 by carlos            #+#    #+#             */
-/*   Updated: 2020/07/10 03:24:27 by carlos           ###   ########.fr       */
+/*   Updated: 2020/07/10 06:27:41 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ int main ()
     //printf("%d\n", f);
     //printf("%d\n", g);
 
-    //ft_printf ("\n%8x\n", 34);
-    //printf ("\n%8x\n", 34);
+    ft_printf ("%.15x ADAD\n", 342352);
+    printf ("%.15x ADAD\n", 342352);
 
 
     return(0);

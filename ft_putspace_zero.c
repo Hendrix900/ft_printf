@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putspace_zero.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 00:21:11 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 06:51:16 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/10 06:28:17 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	ft_check_precision_asterisk(char *new, t_list_printf *next)
 
 	width = next->width;
 	precision = next->precision;
-
 	while (width > 0)
 	{
 		ft_putchar_fd(' ', 1);
@@ -46,14 +45,14 @@ void ft_putspace_zero(char *new, t_list_printf *next)
 
 	width = next->width;
 	precision = next->precision;
-	new = ft_itoa(next->i);
 	variable = ft_strlen(new);
 
 	if (width == precision)
 		ft_putzero(new, next);
 	else if (width > precision)
 	{
-		next->precision = precision - variable;
+		next->precision = variable > precision ? precision = 0 :
+		variable - precision;
 		next->width = width - (next->precision + variable);
 		ft_check_precision_asterisk(new, next);
 	}

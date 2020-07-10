@@ -1,34 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flags.c                                         :+:      :+:    :+:   */
+/*   ft_convert.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/18 11:59:24 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/10 04:34:18 by carlos           ###   ########.fr       */
+/*   Created: 2020/07/10 04:30:51 by carlos            #+#    #+#             */
+/*   Updated: 2020/07/10 04:39:57 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_flags(const char *s, t_list_printf *next)
+size_t ft_strlen_str(const char *s, int l)
 {
-	if (s[next->len] == '-')
+	size_t count;
+
+	count = 0;
+	while (s[l] >= '0' && s[l] <= '9')
 	{
-		next->len++;
-		return ('-');
+		count++;
+		l++;
 	}
-	else if (s[next->len] == '0')
-	{
-		next->len++;
-		return ('0');
-	}
-	else if (s[next->len] == '*')
-	{
-		next->len++;
-		return ('*');
-	}
-	else if (s[next->len] >= '1' && s[next->len] <= '9')
-			return(1);
+	return (count);
+}
+
+int	ft_convert(const char *s, t_list_printf *next)
+{
+	char	*new;
+	int		n;
+	
+	new = ft_substr(s, next->len, (ft_strlen_str(s, next->len)));
+	next->len += ft_strlen_str(s, next->len);
+	n = ft_atoi(new);
+	free(new);
+	new = NULL;
+	return (n);
 }
