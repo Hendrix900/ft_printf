@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 23:34:09 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/11 01:10:08 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/11 01:15:06 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	ft_putzero_0(char *new, t_list_printf *next)
 		ft_putstr_fd(new + count, 1, next);
 	else if ((variable < width) || (precision > variable))
 	{
-		total = precision > 0 ? width : width - variable;  // precision - variable
+		total = precision > 0 ? precision - variable : width - variable;  // precision - variable
 		//printf("L precision es : %d\n", next->precision);
 	//	printf("el ancho es : %d\n", next->width);
 		while (total > 0)
