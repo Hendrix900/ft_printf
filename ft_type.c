@@ -6,7 +6,7 @@
 /*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 18:11:44 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/10 00:33:53 by carlos           ###   ########.fr       */
+/*   Updated: 2020/07/10 01:50:41 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,4 @@ int	ft_type(const char *s, t_list_printf *next)
 	else if (s[next->len] == 'x' || s[next->len] == 'X')
 		return ('x');
 	//	else if (s[next->len] == 'c')
-	return (0);
 }

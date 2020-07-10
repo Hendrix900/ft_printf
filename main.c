@@ -6,7 +6,7 @@
 /*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/21 19:48:56 by carlos            #+#    #+#             */
-/*   Updated: 2020/07/10 00:47:07 by carlos           ###   ########.fr       */
+/*   Updated: 2020/07/10 03:14:52 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 int main ()
 {
-    int a = 98321345;
+    int a = 34;
     char *c = "EL PEPINO DEL ALBERCHE TIENE SED";
     int f;
     int g;
@@ -28,14 +28,14 @@ int main ()
 
      
 	
-	f = ft_printf("El número hexadecimal es : %x\n", a);
-	g = printf("El número hexadecimal es : %x\n", a);
+	//f = ft_printf("El número hexadecimal es : %x\n", a);
+	//g = printf("El número hexadecimal es : %x\n", a);
 
-    printf("%d\n", f);
-    printf("%d\n", g);
+    //printf("%d\n", f);
+    //printf("%d\n", g);
 
-    ft_printf ("%c\n", 42);
-    printf ("%c\n", 42);
+    ft_printf ("\n%8x\n", 34);
+    printf ("\n%8x\n", 34);
 
 
     return(0);
