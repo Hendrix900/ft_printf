@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 23:34:09 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/10 22:02:37 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/10 22:31:36 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	ft_putzero_precision(char *new, t_list_printf *next)
 	{
 		ft_putchar_fd('-', 1);
 		next->br++;
+		variable--;
 		count = 1;
 	}
 	if (variable >= width)
@@ -39,7 +40,7 @@ void	ft_putzero_precision(char *new, t_list_printf *next)
 			total--;
 			next->br++;
 		}
-		ft_putstr_fd(new, 1, next);
+		ft_putstr_fd(new + count, 1, next);
 	}
 }
 

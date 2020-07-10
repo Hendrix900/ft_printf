@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 00:21:11 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/10 22:15:25 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/10 22:29:28 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ void ft_check_precision_minus(char *new, t_list_printf *next)
 		ft_putchar_fd(' ', 1);
 		width--;
 		next->br++;
-
 	}
 }
 
