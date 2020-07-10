@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 00:21:11 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/10 23:50:14 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/11 00:23:06 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,18 @@ void ft_check_precision_minus(size_t v,size_t p, size_t w, char *new, t_list_pri
 
 		if (next->neg == '-' && v < w)
 			w--;
-		if (next->neg == '-' && v < p)
+		if (next->neg == '-' && v > w)
 		{
 			ft_putchar_fd('-', 1);
 			next->br++;
-			p++;
+			p++ ? p > 0 : p--; 
 			count = 1;
 		}
 		else if (next->neg == '-' && w > p)
 		{
 			ft_putchar_fd('-', 1);
 			next->br++;
-			p++;
+			p++ ? p > 0 : p--; 
 			count = 1;
 		}
 		while (p > 0)
