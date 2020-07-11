@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/21 19:48:56 by carlos            #+#    #+#             */
-/*   Updated: 2020/07/11 17:34:41 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/11 18:23:24 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,11 +87,29 @@ int main ()
     ft_printf("this %i number\n", 0);
     printf("this %i number\n", 0);
 
+
+
     ft_printf("%-3d\n", 0);
     printf("%-3d\n", 0);
+
+    ft_printf("%05d\n", 43); //PASA
+    printf("%05d\n", 43);
     
+    ft_printf("%04d\n", -532); //PASA
+    printf("%04d\n", -532);
+
+    ft_printf("%5.0d\n", 0);
+    printf("%5.0d\n", 0);
+
+    ft_printf("%5.d\n", 0);
+    printf("%5.d\n", 0);
+
+    ft_printf("%-5.0d\n", 0);
+    printf("%-5.0d\n", 0);
+
     ft_printf("%-5.d\n", 0);
     printf("%-5.d\n", 0);
+
 
     return(0);
 }
