@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 23:34:09 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/11 16:06:02 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/11 18:48:16 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ void	ft_putzero_0(char *new, t_list_printf *next)
 	size_t	precision;
 	int		total;
 	int count;
-
 	width = next->width;
 	precision = next->precision;
 	variable = ft_strlen(new);
@@ -62,7 +61,7 @@ void	ft_putzero_0(char *new, t_list_printf *next)
 		next->br++;
 		count = 1;
 	}
-	if (variable >= width && precision < variable)
+	if ((variable >= width ) || (variable >= width && precision < variable)) // AÑADIDO RECIENTEMENTE (variable >= width )
 		ft_putstr_fd(new + count, 1, next);
 	else if ((variable < width) || (precision > variable))
 	{
@@ -75,7 +74,6 @@ void	ft_putzero_0(char *new, t_list_printf *next)
 	//	printf("el ancho es : %d\n", next->width);
 		while (total > 0)
 		{
-			
 			ft_putchar_fd('0', 1);
 			total--;
 			next->br++;
