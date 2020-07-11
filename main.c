@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/21 19:48:56 by carlos            #+#    #+#             */
-/*   Updated: 2020/07/11 16:06:38 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/11 16:34:21 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,8 +81,8 @@ int main ()
     ft_printf("El número int es %d  y el %u\n", z, z);
     printf("El número int es %d  y el %u\n", z, z);
 
-    ft_printf("%02.7x\n", 3267);
-    printf("%02.7x\n", 3267);
+    ft_printf("%.d\n", 0);
+    printf("%.d\n", 0);
 
     
   
