@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/10 04:30:51 by carlos            #+#    #+#             */
-/*   Updated: 2020/07/11 23:39:55 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/11 23:57:19 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ int	ft_convert(const char *s, t_list_printf *next)
 		new = ft_substr(s, next->len, (ft_strlen_str(s, next->len)));
 		next->len += ft_strlen_str(s, next->len);
 		n = ft_atoi(new);
-		//printf("lo gordo es %d", n);
 		free(new);
 		new = NULL;
 		return (n);
@@ -44,5 +43,4 @@ int	ft_convert(const char *s, t_list_printf *next)
 		return (0);
 	else
 		return(next->width);
-	
 }
