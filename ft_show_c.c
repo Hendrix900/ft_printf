@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 02:16:52 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/11 23:29:49 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/11 23:52:22 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void ft_show_c(const char *s, t_list_printf *next)
 		new[0] = next->c;
 		new[1] = '\0';
 	}
-	if ((next->i == 0 && next->flags == '-' && next->punt == '.') || (next->i == 0 && next->punt == '.'))
+	if ((next->c == 0 && next->flags == '-' && next->punt == '.') || (next->c == 0 && next->punt == '.'))
 	{
 		//printf("Entra\n");
 		new[0] = '\0';
