@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 03:56:58 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/11 05:33:18 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/11 15:52:19 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,6 @@ void ft_show_hexa(const char *s , t_list_printf *next)
 		ft_putzero(new, next);
 	else
 		ft_putstr_fd(new, 1, next);
+	free(new);
+	new = NULL;
 }
