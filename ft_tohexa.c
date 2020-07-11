@@ -3,15 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tohexa.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 08:10:18 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 23:56:26 by carlos           ###   ########.fr       */
+/*   Updated: 2020/07/11 05:33:39 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>
-#include <stdlib.h>*/
 #include "ft_printf.h"
 
 char	*ft_tohexa(unsigned int nb, char x)
@@ -40,17 +38,3 @@ char	*ft_tohexa(unsigned int nb, char x)
 	}
 	return (new);
 }
-/*
-int main()
-{
-	char *s;
-	char *memory;
-
-	long int a = -58658746;
-	
-	s = ft_tohexa(a, 'X');
-	
-	printf("Mi función es : %s\n", s);
-	printf("  Original es : %lX\n", a);
-}
-*/
