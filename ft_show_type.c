@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 02:22:16 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/11 02:40:46 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/11 04:42:43 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,11 @@ void ft_show_type(const char *s, t_list_printf *next)
 		next->p = va_arg(next->args, int);
 		ft_show_memory(s,next);
 	}
+	else if (next->type == 'u')
+	{
+		next->u = va_arg(next->args, unsigned int);
+		ft_show_u(next);
+	}
+	
 	
 }

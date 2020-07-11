@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_itou.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/26 00:21:06 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/11 04:32:54 by ccastill         ###   ########.fr       */
+/*   Created: 2020/07/11 04:34:30 by ccastill          #+#    #+#             */
+/*   Updated: 2020/07/11 04:38:05 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int		ft_count_nb(int nb)
+int		ft_count_nb2(unsigned long int nb)
 {
 	int				count;
 	unsigned int	c;
@@ -36,7 +36,7 @@ int		ft_count_nb(int nb)
 	return (count);
 }
 
-void	ft_putnum(char *s, int n, int l)
+void	ft_putnum2(char *s, unsigned long int n, int l)
 {
 	unsigned int c;
 
@@ -58,17 +58,15 @@ void	ft_putnum(char *s, int n, int l)
 	}
 }
 
-char	*ft_itoa(int n)
+char	*ft_itou(unsigned long int n)
 {
 	char	*new;
 	int		l;
 
-	if (n < -2147483648)
-		return (NULL);
-	l = ft_count_nb(n);
+	l = ft_count_nb2(n);
 	new = (char*)malloc(sizeof(char) * l + 1);
 	if (new == 0)
 		return (NULL);
-	ft_putnum(new, n, l);
+	ft_putnum2(new, n, l);
 	return (new);
 }

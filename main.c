@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/21 19:48:56 by carlos            #+#    #+#             */
-/*   Updated: 2020/07/11 02:56:36 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/11 04:30:16 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,8 +75,14 @@ int main ()
 	int *puntero; //Declaración de variable puntero de tipo entero
 	puntero = &a; //Asignación de la dirección memoria de a
 
-	ft_printf("La dirección de memoria es: %p\n", &a);
+    int z = -5841474;
+
+	ft_printf("La dirección de memoria es: %p\n", puntero);
 	printf("La dirección de memoria es: %p\n", &a);
+    
+    ft_printf("El número int es %d  y el %u\n", z, z);
+    printf("El número int es %d  y el %u\n", z, z);
+
 
     
   
