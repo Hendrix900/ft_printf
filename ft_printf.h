@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 21:55:45 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/11 05:31:02 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/11 05:39:23 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 typedef struct		s_list_printf
 {
 	va_list			args;
-	int				br; // Conocer cuantas posiciones hay antes del %??? no lo se
+	int				br; // Conocer cuantas posiciones se han contado para devolver el valor.
 	int				flags; // Contendrá un ('0') o (1) o ('-') En caso de haberlo
 	int				punt; // Contendrá un ('.') En caso de haberlo
 	int				width; // Servirá para comprobar el ancho
