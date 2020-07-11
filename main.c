@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/21 19:48:56 by carlos            #+#    #+#             */
-/*   Updated: 2020/07/11 16:34:21 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/11 16:52:59 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,8 @@ int main ()
     ft_printf("%.d\n", 0);
     printf("%.d\n", 0);
 
-    
+    ft_printf("this %i number\n", 0);
+    printf("this %i number\n", 0);
   
     return(0);
 }
