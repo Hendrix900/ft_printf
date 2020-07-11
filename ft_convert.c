@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_convert.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/10 04:30:51 by carlos            #+#    #+#             */
-/*   Updated: 2020/07/10 17:22:19 by carlos           ###   ########.fr       */
+/*   Updated: 2020/07/11 22:55:11 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_convert(const char *s, t_list_printf *next)
 	char	*new;
 	int		n;
 	
-	if (s[next->len] >= '1' && s[next->len] <= '9')
+	if (s[next->len] >= '0' && s[next->len] <= '9')
 	{
 		new = ft_substr(s, next->len, (ft_strlen_str(s, next->len)));
 		next->len += ft_strlen_str(s, next->len);
