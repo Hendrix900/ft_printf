@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/21 19:48:56 by carlos            #+#    #+#             */
-/*   Updated: 2020/07/11 01:53:05 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/11 02:56:36 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,6 @@
 
 int main ()
 {
-    int a = 34;
-    char *c = "EL PEPINO DEL ALBERCHE TIENE SED";
-    int f;
-    int g;
     
     //f = ft_printf("Hola que tal %-60s Aquí seguimos escribiendo %07d\n",c ,a);
    // g = printf("Hola que tal %-60s Aquí seguimos escribiendo %07d\n",c ,a);
@@ -70,6 +66,19 @@ int main ()
 
     ft_printf ("%.d\n", 0);
     printf ("%.d\n", 0);
+
+
+    char *s;
+	char *memory;
+
+	int a=0; //Declaración de variable entera de tipo entero
+	int *puntero; //Declaración de variable puntero de tipo entero
+	puntero = &a; //Asignación de la dirección memoria de a
+
+	ft_printf("La dirección de memoria es: %p\n", &a);
+	printf("La dirección de memoria es: %p\n", &a);
+
+    
   
     return(0);
 }

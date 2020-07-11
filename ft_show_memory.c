@@ -6,17 +6,17 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:19:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/11 02:23:31 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/11 02:52:34 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void ft_show_hexa(const char *s , t_list_printf *next)
+void ft_show_memory(const char *s , t_list_printf *next)
 {
 	char *new;
 	
-	new = ft_tomemory(next->hexa, s[next->len]);
+	new = ft_tomemory(next->p);
 	if (new[0] == '-')
 		next->neg = '-';
 	if (next->flags >= 1 && next->punt > 1)
