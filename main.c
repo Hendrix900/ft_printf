@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/21 19:48:56 by carlos            #+#    #+#             */
-/*   Updated: 2020/07/12 03:02:27 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/12 03:06:15 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ int main ()
 
      
 	
-    f = ft_printf("LA dirección de memoria es : %p\n", a);
-	g = printf("LA dirección de memoria es : %p\n", a);
+    f = ft_printf("%03u\n", 0);
+	g = printf("%03u\n", 0);
 
     printf("%d\n", f);
     printf("%d\n", g);
