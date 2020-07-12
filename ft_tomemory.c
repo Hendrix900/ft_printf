@@ -6,18 +6,18 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:20:42 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/11 05:30:03 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/12 02:04:15 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char	*ft_tomemory(unsigned long int nb)
+char	*ft_tomemory(unsigned int nb)
 {
 	char				*hex;
 	char				*base;
-	unsigned long int	nbr;
-	unsigned long int	len;
+	unsigned  int	nbr;
+	unsigned  int	len;
 
 	base = "0123456789abcdef";
 	len = 2;

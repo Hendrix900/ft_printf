@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/21 19:48:56 by carlos            #+#    #+#             */
-/*   Updated: 2020/07/11 23:50:27 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/12 02:01:18 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,20 @@
 
 int main ()
 {
-    
-    //f = ft_printf("Hola que tal %-60s Aquí seguimos escribiendo %07d\n",c ,a);
-   // g = printf("Hola que tal %-60s Aquí seguimos escribiendo %07d\n",c ,a);
+ 
+ int f, g;
+
+ int a = 985458846;
 
 
      
 	
-	//f = ft_printf("El número hexadecimal es : %x\n", a);
-	//g = printf("El número hexadecimal es : %x\n", a);
+    f = ft_printf("El número hexadecimal es : %p\n", a);
+	g = printf("El número hexadecimal es : %p\n", a);
 
-    //printf("%d\n", f);
-    //printf("%d\n", g);
-
+    printf("%d\n", f);
+    printf("%d\n", g);
+/*
     ft_printf ("%15.7d\n", 3267);
     printf ("%15.7d\n", 3267);
 
@@ -106,6 +107,6 @@ int main ()
 
     ft_printf("%.4d\n", 5263);
     printf("%.4d\n", 5263);
-
+*/
     return(0);
 }
