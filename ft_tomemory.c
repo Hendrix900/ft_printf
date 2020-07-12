@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:20:42 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/12 02:04:15 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/12 02:10:38 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_tomemory(unsigned int nb)
 	unsigned  int	len;
 
 	base = "0123456789abcdef";
-	len = 2;
+	len = 4;
 	nbr = nb;
 	while (nb != 0)
 	{
@@ -38,5 +38,7 @@ char	*ft_tomemory(unsigned int nb)
 	}
 	hex[0] = '0';
 	hex[1] = 'x';
+	hex[2] = '1';
+	hex[3] = '0';
 	return (hex);
 }
