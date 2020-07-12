@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 03:56:58 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/11 23:52:32 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/12 02:33:43 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void ft_show_hexa(const char *s , t_list_printf *next)
 	if ((next->hexa == 0 && next->flags == '-' && next->punt == '.') || (next->hexa == 0 && next->punt == '.'))
 	{
 		//printf("Entra\n");
-		new[0] = '\0';
+		new[0] = '0';
 	}
 	if (new[0] == '-')
 		next->neg = '-';

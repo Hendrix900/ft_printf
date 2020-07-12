@@ -6,13 +6,13 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:20:42 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/12 02:10:38 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/12 02:24:34 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char	*ft_tomemory(unsigned int nb)
+char	*ft_tomemory(unsigned long int nb)
 {
 	char				*hex;
 	char				*base;
@@ -20,7 +20,7 @@ char	*ft_tomemory(unsigned int nb)
 	unsigned  int	len;
 
 	base = "0123456789abcdef";
-	len = 4;
+	len = 2;
 	nbr = nb;
 	while (nb != 0)
 	{
@@ -38,7 +38,7 @@ char	*ft_tomemory(unsigned int nb)
 	}
 	hex[0] = '0';
 	hex[1] = 'x';
-	hex[2] = '1';
-	hex[3] = '0';
+	//hex[2] = '1';
+	//hex[3] = '0';
 	return (hex);
 }

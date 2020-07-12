@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/21 19:48:56 by carlos            #+#    #+#             */
-/*   Updated: 2020/07/12 02:09:35 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/12 02:34:19 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,12 @@ int main ()
  
  int f, g;
 
- int a = 4403937720;
-
+ unsigned  int a = 44039439678967;
 
      
 	
-    f = ft_printf("El número hexadecimal es : %p\n", a);
-	g = printf("El número hexadecimal es : %p\n", a);
+    f = ft_printf("LA dirección de memoria es : %p\n", a);
+	g = printf("LA dirección de memoria es : %p\n", a);
 
     printf("%d\n", f);
     printf("%d\n", g);
