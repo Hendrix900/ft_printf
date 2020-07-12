@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/21 19:48:56 by carlos            #+#    #+#             */
-/*   Updated: 2020/07/12 03:06:15 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/12 03:27:02 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ int main ()
 
      
 	
-    f = ft_printf("%03u\n", 0);
-	g = printf("%03u\n", 0);
+    ft_printf("%2.9p\n", 1234);
+	printf("%2.9p\n", 1234);
 
-    printf("%d\n", f);
-    printf("%d\n", g);
+    //printf("%d\n", f);
+    //printf("%d\n", g);
 /*
     ft_printf ("%15.7d\n", 3267);
     printf ("%15.7d\n", 3267);
