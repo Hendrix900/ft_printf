@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 05:50:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/13 23:59:33 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/14 00:29:11 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ int	ft_width(const char *s, t_list_printf *next)
 //	printf("La precision es : %d\n", next->precision);
 //	printf("LA flag es : %d\n", next->flags);
 //	printf("LA PRecision es : %c\n", next->punt);
-//	printf("LA cadena es : %s\n", next->str);
+//	printf("LA posición es : %c\n", s[next->len]);
+
 
 	
 	return (next->width);
