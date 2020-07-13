@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 03:43:18 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/13 22:45:51 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/13 23:59:08 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ void ft_check_str(const char *new, t_list_printf *next)
 	if (next->width < next->precision)
 	{
 		conver = ft_substr(new, 0, (next->precision));
-		ft_putstr_fd(conver, 1, next);
+		ft_putspace(conver, next);
+		//ft_putstr_fd(conver, 1, next);
 	}
 	else if (next->width >= next->precision)
 	{
 		conver = ft_substr(new, 0, (next->precision));
 		ft_putspace(conver, next);
 	}
-
 }
 void ft_show_str(const char *s, t_list_printf *next)
 {
@@ -36,10 +36,13 @@ void ft_show_str(const char *s, t_list_printf *next)
 	null = "(null)";
 	new = next->str;
 	if (next->str == NULL)
+	{	
+		printf("ENtró");
 		new = null;
+	}
 	else
 	 	new = next->str;
-	if (next->flags >= 0 && next->punt > 1)
+	if (next->flags >= 0 && next->punt == '.')
 		ft_check_str(new, next);
 	else if ((next->flags == 1) || (next->flags == '-') || (next->flags == '*'))
 		ft_putspace(new, next);

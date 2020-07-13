@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/21 19:48:56 by carlos            #+#    #+#             */
-/*   Updated: 2020/07/13 22:49:12 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/13 23:46:50 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,8 +104,8 @@ int main ()
 */
 
     //ft_printf("%3.6s", NULL);
-    f = ft_printf("%00-s", "hi low\n");
-    g = printf("%00-s", "hi low\n");
+    f = ft_printf("%3.6s\n", "\0");
+    g = printf("%3.6s\n", "\0");
 
     printf("%d\n", f);
     printf("%d\n", g);
