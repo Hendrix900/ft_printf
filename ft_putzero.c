@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 23:34:09 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/12 03:58:40 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/12 04:38:09 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,9 +69,6 @@ void	ft_putzero_0(char *new, t_list_printf *next)
 			total = width;
 		else
 		total = precision > 0 ? precision - variable : width - variable;  // precision - variable
-	
-		//printf("L precision es : %d\n", next->precision);
-	//	printf("el ancho es : %d\n", next->width);
 		while (total > 0)
 		{
 			ft_putchar_fd('0', 1);
