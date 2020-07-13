@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 03:43:18 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/13 23:59:08 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/14 00:02:06 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ void ft_show_str(const char *s, t_list_printf *next)
 	new = next->str;
 	if (next->str == NULL)
 	{	
-		printf("ENtró");
 		new = null;
 	}
 	else
