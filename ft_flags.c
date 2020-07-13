@@ -6,20 +6,15 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 11:59:24 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/14 00:26:58 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/14 01:20:31 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_flags(const char *s, t_list_printf *next)
+int	ft_flags0(const char *s, t_list_printf *next)
 {
-	if (s[next->len] == '-')
-	{
-		next->len++;
-		return ('-');
-	}
-	else if (s[next->len] == '0')
+	if (s[next->len] == '0')
 	{
 		if (s[next->len + 1] == '-')
 		{
@@ -35,6 +30,18 @@ int	ft_flags(const char *s, t_list_printf *next)
 		next->len++;
 		return ('0');
 	}
+
+}
+
+int	ft_flags(const char *s, t_list_printf *next)
+{
+	if (s[next->len] == '-')
+	{
+		next->len++;
+		return ('-');
+	}
+	else if (s[next->len] == '0')
+		return(ft_flags0(s,next));
 	else if (s[next->len] == '*')
 	{
 		next->len++;
