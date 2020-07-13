@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 03:43:18 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/13 22:28:45 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/13 22:42:12 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ void ft_check_str(const char *new, t_list_printf *next)
 {
 	char *conver;
 
-	if (next->width <= next->precision)
+	if (next->width < next->precision)
 	{
 		conver = ft_substr(new, 0, (next->precision));
 		ft_putstr_fd(conver, 1, next);
 	}
-	else if (next->width > next->precision)
+	else if (next->width >= next->precision)
 	{
 		conver = ft_substr(new, 0, (next->precision));
 		ft_putspace(conver, next);
