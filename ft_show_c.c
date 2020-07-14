@@ -6,11 +6,12 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 02:16:52 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/14 17:23:22 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/14 17:36:30 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
 
 void ft_show_c(const char *s, t_list_printf *next)
 {
@@ -18,29 +19,16 @@ void ft_show_c(const char *s, t_list_printf *next)
 	char *new;
 	c = next->c + '0';
 	new = malloc(sizeof(char));
-	new[1] = c;
+	new[1] = '\0';
 	if (next->c == '\0' & next->flags == 0) 
 	{
 		ft_putchar_fd(0,1);
 		next->br++;
 	}
 	else if (next->type == '%') 
-	{
-		//next->br++;
 		new[0] = s[next->len];
-		new[1] = '\0';
-	}
 	else 
-	{
-		//next->br++;
 		new[0] = next->c;
-		new[1] = '\0';
-	}
-	/*if ((next->c == 0 && next->flags == '-' && next->punt == '.') || 
-		(next->c == 0 && next->punt == '.'))
-	{
-		new[0] = '\0';
-	}*/
 	if (new[0] == '-')
 		next->neg = '-';
 	if (next->flags >= 1 && next->punt > 1)
@@ -51,4 +39,6 @@ void ft_show_c(const char *s, t_list_printf *next)
 		ft_putzero(new, next);
 	else
 		ft_putstr_fd(new, 1, next);
+	free(new);
+	new = NULL;
 }	

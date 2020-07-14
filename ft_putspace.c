@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 20:32:15 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/14 17:08:35 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/14 17:26:33 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	ft_putspace_left(char *new, t_list_printf *next)
 
 	width = next->width;
 	variable = ft_strlen(new);
-	//printf("el valor de la variable es %ld", variable);
 	if (variable >= width)
 	{
 		ft_putstr_fd(new, 1, next);
