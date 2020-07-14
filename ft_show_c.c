@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 02:16:52 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/14 15:43:40 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/14 15:56:07 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ void ft_show_c(const char *s, t_list_printf *next)
 	else 
 	{
 		//next->br++;
-		new[0] = next->c;
-		new[1] = '\0';
+		new[1] = next->c;
+		//new[0] = '\0';
 	}
 	if ((next->c == 0 && next->flags == '-' && next->punt == '.') || 
 		(next->c == 0 && next->punt == '.'))

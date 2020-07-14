@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/21 19:48:56 by carlos            #+#    #+#             */
-/*   Updated: 2020/07/14 02:55:05 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/14 15:55:21 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,19 @@ int main ()
 */
 
     f = ft_printf("%c", '\0');
-    g = printf("%c", '\0');
+    g = printf("%c\n", '\0');
+
+    printf("%d\n", f);
+    printf("%d\n", g);
+
+    f = ft_printf("%5c\n", 'l');
+    g = printf("%5c\n", 'l');
+
+    printf("%d\n", f);
+    printf("%d\n", g);
+    
+    f = ft_printf("%-5c\n", 'l');
+    g = printf("%-5c\n", 'l');
 
     printf("%d\n", f);
     printf("%d\n", g);
