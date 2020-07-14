@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 02:16:52 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/14 16:45:24 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/14 16:58:19 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ void ft_show_c(const char *s, t_list_printf *next)
 	char c;
 	char *new;
 	c = next->c + '0';
-	new = malloc(sizeof(char) + 1);
+	new = malloc(sizeof(char));
 	//new[1] = c;
 	if (next->c == '\0') 
 	{
-		new = "";
+		new = " ";
 	}
 	else if (next->type == '%') 
 	{
