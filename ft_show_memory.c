@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:19:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/12 04:13:58 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/15 20:22:44 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ void ft_show_memory(const char *s , t_list_printf *next)
 	char *new;
 	
 	new = ft_tomemory(next->p);
-	if ((next->p == 0 && next->flags == '-' && next->punt == '.') || (next->p == 0 && next->punt == '.'))
+	if ((next->p == 0 && next->flags == '-' && next->punt == '.') || 
+		(next->p == 0 && next->punt == '.'))
 	{
 		new[1] = 'x';
 

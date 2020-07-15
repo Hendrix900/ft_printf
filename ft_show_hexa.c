@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 03:56:58 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/12 03:09:04 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/15 20:22:39 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ void ft_show_hexa(const char *s , t_list_printf *next)
 	char *new;
 	
 	new = ft_tohexa(next->hexa, s[next->len]);
-	if ((next->hexa == 0 && next->flags == '-' && next->punt == '.') || (next->hexa == 0 && next->punt == '.'))
+	if ((next->hexa == 0 && next->flags == '-' && next->punt == '.') ||
+		(next->hexa == 0 && next->punt == '.'))
 	{
 		//printf("Entra\n");
 		new[0] = '\0';

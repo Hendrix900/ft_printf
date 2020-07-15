@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 04:27:37 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/11 23:51:58 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/15 20:22:58 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ void ft_show_u(t_list_printf *next)
 {
 	char *new;
 	new = ft_itou(next->u);
-	if ((next->u == 0 && next->flags == '-' && next->punt == '.') || (next->u == 0 && next->punt == '.'))
+	if ((next->u == 0 && next->flags == '-' && next->punt == '.') ||
+		(next->u == 0 && next->punt == '.'))
 	{
 		//printf("Entra\n");
 		new[0] = '\0';

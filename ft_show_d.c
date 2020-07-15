@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 19:13:24 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/11 23:29:02 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/15 20:22:27 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ void ft_show_d(t_list_printf *next)
 {
 	char *new;
 	new = ft_itoa(next->i);
-	if ((next->i == 0 && next->flags == '-' && next->punt == '.') || (next->i == 0 && next->punt == '.'))
+	if ((next->i == 0 && next->flags == '-' && next->punt == '.') || 
+		(next->i == 0 && next->punt == '.'))
 	{
 		//printf("Entra\n");
 		new[0] = '\0';
