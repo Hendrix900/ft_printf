@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 23:34:09 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/12 04:38:09 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/15 20:09:58 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ void	ft_putzero_precision(char *new, t_list_printf *next)
 	count = 0;
 	if (next->neg == '-')
 	{
-		ft_putchar_fd('-', 1); //next->type == 'p' ? ft_putstr_fd("0x",1,next) :
-		next->br++;
+		ft_putchar_fd('-', 1, next); //next->type == 'p' ? ft_putstr_fd("0x",1,next) :
+		//next->br++;
 		variable--;
 		count = 1;
 	}
@@ -36,9 +36,9 @@ void	ft_putzero_precision(char *new, t_list_printf *next)
 		total = width - variable;
 		while (total > 0)
 		{
-			ft_putchar_fd('0', 1);
+			ft_putchar_fd('0', 1, next);
 			total--;
-			next->br++;
+			//next->br++;
 		}
 		ft_putstr_fd(new + count, 1, next);
 	}
@@ -57,8 +57,8 @@ void	ft_putzero_0(char *new, t_list_printf *next)
 	count = 0;	
 	if (next->neg == '-') //añadido recientemente
 	{
-		ft_putchar_fd('-', 1); //next->type == 'p' ? ft_putstr_fd("0x",1,next) :
-		next->br++;
+		ft_putchar_fd('-', 1,next); //next->type == 'p' ? ft_putstr_fd("0x",1,next) :
+		//next->br++;
 		count = 1;
 	}
 	if ((variable >= width ) || (variable >= width && precision < variable)) // AÑADIDO RECIENTEMENTE (variable >= width )
@@ -71,9 +71,9 @@ void	ft_putzero_0(char *new, t_list_printf *next)
 		total = precision > 0 ? precision - variable : width - variable;  // precision - variable
 		while (total > 0)
 		{
-			ft_putchar_fd('0', 1);
+			ft_putchar_fd('0', 1,next);
 			total--;
-			next->br++;
+			//next->br++;
 		}
 		ft_putstr_fd(new + count, 1, next); 
 	}

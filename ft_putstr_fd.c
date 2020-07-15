@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/21 15:07:12 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/11 15:50:38 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/15 20:07:21 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,8 @@ void	ft_putstr_fd(char *s, int fd, t_list_printf  *next)
 	if (s != 0)
 		while (s[l])
 		{
-			ft_putchar_fd(s[l], fd);
+			ft_putchar_fd(s[l], fd, next);
 			l++;
-			next->br++;
+			//next->br++;
 		}
-	
 }

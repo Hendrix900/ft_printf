@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_zeros.c                                         :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 08:37:17 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/15 20:12:04 by ccastill         ###   ########.fr       */
+/*   Created: 2019/11/21 14:55:47 by ccastill          #+#    #+#             */
+/*   Updated: 2020/07/15 20:05:35 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_zeros(int n, t_list_printf  *next)
+void	ft_putchar_fd(char c, int fd, t_list_printf *next)
 {
-	while (n > 0)
-	{
-		ft_putchar_fd('0', 1, next);
-		n--;
-	}
+	write(fd, &c, 1);
+	next->br++;	
 }

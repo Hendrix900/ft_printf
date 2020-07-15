@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 00:21:11 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/12 03:42:29 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/15 20:14:02 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,30 +24,30 @@ void ft_check_precision_minus(size_t v,size_t p, size_t w, char *new, t_list_pri
 			w--;
 		if (next->neg == '-' && v > w)
 		{
-			ft_putchar_fd('-', 1);
-			next->br++;
+			ft_putchar_fd('-', 1, next);
+			//next->br++;
 			p++ ? p > 0 : p--; 
 			count = 1;
 		}
 		else if (next->neg == '-' && w > p)
 		{
-			ft_putchar_fd('-', 1);
-			next->br++;
+			ft_putchar_fd('-', 1, next);
+			//next->br++;
 			p++ ? p > 0 : p--; 
 			count = 1;
 		}
 		while (p > 0)
 		{
-			ft_putchar_fd('0', 1);
+			ft_putchar_fd('0', 1, next);
 			p--;
-			next->br++;
+			//next->br++;
 		}
 		ft_putstr_fd(new + count, 1, next);
 		while (w > 0)
 		{
-			ft_putchar_fd(' ', 1);
+			ft_putchar_fd(' ', 1, next);
 			w--;
-			next->br++;
+			//next->br++;
 		}
 }
 
@@ -68,29 +68,29 @@ void ft_check_precision_asterisk(size_t variable, char *new, t_list_printf *next
 			width--;
 		while (width > 0)
 		{
-			ft_putchar_fd(' ', 1);
+			ft_putchar_fd(' ', 1, next);
 			width--;
-			next->br++;
+			//next->br++;
 		}
 		if (next->neg == '-' && width < precision)
 		{
-			ft_putchar_fd('-', 1);
-			next->br++;
+			ft_putchar_fd('-', 1, next);
+			//next->br++;
 			precision++;
 			count = 1;
 		}
 		else if (next->neg == '-' && width > precision)
 		{
-			ft_putchar_fd('-', 1);
-			next->br++;
+			ft_putchar_fd('-', 1, next);
+			//next->br++;
 			precision++;
 			count = 1;
 		}
 		while (precision > 0)
 		{
-			ft_putchar_fd('0', 1);
+			ft_putchar_fd('0', 1, next);
 			precision--;
-			next->br++;
+			//next->br++;
 		}
 		ft_putstr_fd(new + count, 1, next);
 	}
