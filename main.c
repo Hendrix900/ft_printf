@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/21 19:48:56 by carlos            #+#    #+#             */
-/*   Updated: 2020/07/14 18:01:41 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/15 22:26:02 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,32 +103,30 @@ int main ()
     printf("%07i", -54);
 */
 
-    f = ft_printf("%c\n", '\0');
-    g = printf("%c\n", '\0');
+    f = ft_printf("%*icasa\n", -14, 94827);
+    g = printf("%*icasa\n", -14, 94827);
 
     printf("%d\n", f);
     printf("%d\n", g);
+/*
 
-    f = ft_printf("%5c\n", 'l');
-    g = printf("%5c\n", 'l');
+    f = ft_printf("%-*s\n", 32, "abc");
+    g = printf("%-*s\n", 32, "abc");
 
     printf("%d\n", f);
     printf("%d\n", g);
     
-    f = ft_printf("%-5c\n", 'l');
-    g = printf("%-5c\n", 'l');
+    f = ft_printf("%.*s", 3, "hello");
+    g = printf("%.*s", 3, "hello");
 
     printf("%d\n", f);
     printf("%d\n", g);
-/*
-int c_nullterm_basic(void){return test("%c", '\0');}
-int c_nullterm_5w(void){return test("%5c", '\0');}
-int c_nullterm_5wlj(void){return test("%-5c", '\0');}
-*/
-/*
-214135224
 
-4509102520
+    f = ft_printf("%-*.*s", 7, 3, "yolo");
+    g = printf("%-*.*s", 7, 3, "yolo");
+    
+    printf("%d\n", f);
+    printf("%d\n", g);
 */
     return(0);
 }

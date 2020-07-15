@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/22 13:33:28 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/15 19:08:09 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/15 22:21:58 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,5 @@ int	ft_punt(const char *s, t_list_printf *next)
 
 		return ('.');
 	}
-
 	return (0);
 }
