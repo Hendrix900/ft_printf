@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 12:48:05 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/09 06:54:49 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/15 20:12:48 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 void				*ft_memcpy(void *dest, const void *src, size_t n);
 void				*ft_memmove(void *dest, const void *src, size_t n);
 void				*ft_memset(void *str, int c, size_t n);
-void				ft_putchar_fd(char c, int fd);
+//void				ft_putchar_fd(char c, int fd, t_list_printf *next);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 //void				ft_putstr_fd(char *s, int fd);
