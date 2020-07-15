@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 02:16:52 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/15 19:57:44 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/15 20:01:01 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_show_c(const char *s, t_list_printf *next)
 	if (next->c == '\0' && next->type != '%')
 	{
 		next->c = '\0';//ft_putchar_fd(0, 1);
-		//next->br++;
+		next->br++; // Añadir un contador de posiciones a ft_putchar
 	}
 	else if (next->type == '%') 
 		new[0] = s[next->len];
@@ -37,7 +37,7 @@ void	ft_show_c(const char *s, t_list_printf *next)
 	else if ((next->flags == '0') || (next->punt == '.'))
 		ft_putzero(new, next);
 	else
-		ft_putstr_fd(new, 1, next);
-	free(new);
+		next->type == 'c' && next->c == '\0' ? ft_putchar_fd(0,1) : 
+		ft_putstr_fd(new, 1, next);	free(new);
 	new = NULL;
 }
