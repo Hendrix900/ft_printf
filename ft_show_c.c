@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 02:16:52 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/15 19:32:34 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/15 19:37:47 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ void	ft_show_c(const char *s, t_list_printf *next)
 	new[1] = '\0';
 	if (next->c == '\0' && next->type != '%')
 	{
-		ft_putchar_fd(0, 1);
+		//ft_putchar_fd(0, 1);
 		next->br++;
 	}
-	else if (next->type == '%')
+	if (next->type == '%')
 		new[0] = s[next->len];
 	else
 		new[0] = next->c;
