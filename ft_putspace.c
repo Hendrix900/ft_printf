@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 20:32:15 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/15 18:58:44 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/15 19:02:14 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_putspace_left(char *new, t_list_printf *next)
 	variable = ft_strlen(new);
 	if (variable >= width)
 	{
-		next->c == '0' ? ft_putchar_fd(0,1) : ft_putstr_fd(new, 1, next);
+		next->c == '\0' ? ft_putchar_fd(0,1) : ft_putstr_fd(new, 1, next);
 	}
 	else if (variable < width)
 	{
@@ -33,7 +33,7 @@ void	ft_putspace_left(char *new, t_list_printf *next)
 			total--;
 			next->br++;
 		}
-		next->c == '0' ? ft_putchar_fd(0,1) : ft_putstr_fd(new, 1, next);
+		next->c == '\0' ? ft_putchar_fd(0,1) : ft_putstr_fd(new, 1, next);
 	}
 }
 
@@ -46,11 +46,11 @@ void	ft_putspace_right(char *new, t_list_printf *next)
 	width = next->width;
 	variable = ft_strlen(new);
 	if (variable >= width)
-		next->c == '0' ? ft_putchar_fd(0,1) : ft_putstr_fd(new, 1, next);
+		next->c == '\0' ? ft_putchar_fd(0,1) : ft_putstr_fd(new, 1, next);
 	else if (variable < width)
 	{
 		total = width - variable;
-		next->c == '0' ? ft_putchar_fd(0,1) : ft_putstr_fd(new, 1, next);
+		next->c == '\0' ? ft_putchar_fd(0,1) : ft_putstr_fd(new, 1, next);
 		while (total > 0)
 		{
 			ft_putchar_fd(' ', 1);
