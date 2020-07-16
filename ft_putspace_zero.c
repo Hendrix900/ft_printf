@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 00:21:11 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/16 21:16:55 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/16 21:19:54 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ void ft_check_ast(size_t v,size_t p, size_t w, char *new, t_list_printf *next)
 {
 	int count;
 
-
 	count = 0;
 	if (next->flags == '-')
 		ft_check_prec(v, p, w, new, next);
@@ -52,7 +51,7 @@ void ft_check_ast(size_t v,size_t p, size_t w, char *new, t_list_printf *next)
 		if (next->neg == '-' && w < p)
 		{
 			ft_putchar_fd('-', 1, next);
-			//p++;
+			p++;
 			count = 1;
 		}
 		else if (next->neg == '-' && w > p)
