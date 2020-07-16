@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 03:43:18 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/16 04:33:56 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/16 04:37:14 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void ft_show_str(const char *s, t_list_printf *next)
 		new = null;
 	else
 	 	new = next->str;
-	if (next->precision == 0)
+	if (next->precision == 0 && next->punt == '.')
 		ft_putstr_fd(new, 1, next);
 	if (next->flags >= 0 && next->punt == '.')
 		ft_check_str(new, next);
