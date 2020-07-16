@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:19:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/16 12:39:35 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/16 13:55:48 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,21 +82,21 @@ void ft_show_memory(const char *s , t_list_printf *next)
 		new[1] = 'x';
 
 	}*/
-
-	if (next->punt > 1)
+	/*
+	else if (next->punt > 1 || next->flags == '0')
 		ft_memoryzero(new, next, null);
 	else if ((next->flags == 1) || (next->flags == '-') || (next->flags == '*'))
 		ft_memoryspace(new, next, null);
-	else if (new[0] == '-')
-		next->neg = '-';
+	/*else if (new[0] == '-')
+		next->neg = '-';*/
 	else if (next->p == '\0')
 		ft_putstr_fd(null,1,next);
-	/*else if (next->flags >= 1 && next->punt > 1)
-		ft_putspace_zero(new, next);
+	else if (next->flags >= 1 && next->punt > 1)
+		ft_putspace_zero(ft_strjoin(null, new), next);
 	else if ((next->flags == 1) || (next->flags == '-') || (next->flags == '*')) 
-		ft_putspace(new, next);
+		ft_memoryspace(new, next, null);
 	else if ((next->flags == '0') || (next->punt == '.'))
-		ft_putzero(new, next);*/
+		ft_memoryzero(new, next, null);
 	else
 		ft_putstr_fd(ft_strjoin(null, new), 1, next);
 }

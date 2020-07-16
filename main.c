@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/21 19:48:56 by carlos            #+#    #+#             */
-/*   Updated: 2020/07/16 12:39:48 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/16 13:56:23 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,8 +103,8 @@ int main ()
     printf("%07i", -54);
 */
 
-    f = ft_printf("%8p\n", 645841);
-    g = printf("%8p\n",645841 );
+    f = ft_printf("%.2pcasa\n", 1234);
+    g = printf("%.2pcasa\n", 1234);
 
     printf("%d\n", f);
     printf("%d\n", g);
