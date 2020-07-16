@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putspace_zero.c                                 :+:      :+:    :+:   */
+/*   ft_putspace_zero copy.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 00:21:11 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/16 22:12:32 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/16 21:45:32 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ void ft_check_ast(size_t v,size_t p, size_t w, char *new, t_list_printf *next)
 		ft_putstr_fd(new + count, 1, next);
 	}
 }
-
 
 void ft_putspace_zero(char *new, t_list_printf *next)
 {
