@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_width.c                                         :+:      :+:    :+:   */
+/*   ft_precision.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 05:50:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/16 05:11:26 by ccastill         ###   ########.fr       */
+/*   Created: 2020/07/16 05:05:27 by ccastill          #+#    #+#             */
+/*   Updated: 2020/07/16 05:06:26 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	ft_strlen_print_f(const char *s, int l)
+size_t	ft_strlen_print_p(const char *s, int l)
 {
 	size_t q;
 
@@ -25,36 +25,29 @@ size_t	ft_strlen_print_f(const char *s, int l)
 	return (q);
 }
 
-void	ft_axterix(t_list_printf *next)
-{
-	next->width = va_arg(next->args, int);
-	if (next->width < 0)
-	{
-		next->width *= -1;
-		next->ar_neg= 1;
-	}
-	next->len++;
-}
-
-int		ft_width(const char *s, t_list_printf *next)
+int		ft_precision(const char *s, t_list_printf *next)
 {
 	char	*substr;
 	size_t	q;
 
-	next->ar_neg = 0;
-	if (next->flags == '-' || next->flags == '0' || next->flags == 1)
+	if (next->punt == '.')
 	{
 		if (s[next->len] >= '0' && s[next->len] <= '9')
 		{
 			substr = ft_substr(s, next->len,
-					(q = ft_strlen_print_f(s, next->len)));
-			next->width = ft_atoi(substr);
+					(q = ft_strlen_print_p(s, next->len)));
+			next->precision = ft_atoi(substr);
 			free(substr);
 			substr = NULL;
 			next->len += q;
 		}
 		else if (s[next->len] == '*')
-			ft_axterix(next);
+		{
+			next->precision = va_arg(next->args, int);
+			if (next->precision < 0)
+				next->punt = 0;
+			next->len++;
+		}
 	}
-	return (next->width);
+	return (next->precision);
 }
