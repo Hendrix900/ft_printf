@@ -6,20 +6,17 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 00:21:11 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/15 20:24:43 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/16 20:42:35 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void ft_check_precision_minus(size_t v,size_t p, size_t w, char *new, t_list_printf *next)
+void ft_check_prec(size_t v,size_t p, size_t w, char *new, t_list_printf *next)
 {
 	int count;
 
 	count = 0;
-	w = next->width;
-	p = next->precision;
-
 		if (next->neg == '-' && v < w)
 			w--;
 		if (next->neg == '-' && v > w)
@@ -34,56 +31,36 @@ void ft_check_precision_minus(size_t v,size_t p, size_t w, char *new, t_list_pri
 			p++ ? p > 0 : p--; 
 			count = 1;
 		}
-		while (p > 0)
-		{
-			ft_putchar_fd('0', 1, next);
-			p--;
-		}
+		ft_zeros(p, next);
 		ft_putstr_fd(new + count, 1, next);
-		while (w > 0)
-		{
-			ft_putchar_fd(' ', 1, next);
-			w--;
-		}
+		ft_spaces(w, next);
 }
 
-void ft_check_precision_asterisk(size_t variable, char *new, t_list_printf *next)
+void ft_check_ast(size_t v,size_t p, size_t w, char *new, t_list_printf *next)
 {
-	size_t width;
-	size_t precision;
 	int count;
-
 	count = 0;
-	width = next->width;
-	precision = next->precision;
+	
 	if (next->flags == '-')
-		ft_check_precision_minus(variable, precision, width, new, next);
+		ft_check_prec(v, p, w, new, next);
 	else
 	{
-		if (next->neg == '-' && variable < width)
-			width--;
-		while (width > 0)
-		{
-			ft_putchar_fd(' ', 1, next);
-			width--;
-		}
-		if (next->neg == '-' && width < precision)
+		if (next->neg == '-' && v < w)
+			w--;
+		ft_spaces(w, next);
+		if (next->neg == '-' && w < p)
 		{
 			ft_putchar_fd('-', 1, next);
-			precision++;
+			p++;
 			count = 1;
 		}
-		else if (next->neg == '-' && width > precision)
+		else if (next->neg == '-' && w > p)
 		{
 			ft_putchar_fd('-', 1, next);
-			precision++;
+			p++;
 			count = 1;
 		}
-		while (precision > 0)
-		{
-			ft_putchar_fd('0', 1, next);
-			precision--;
-		}
+		ft_zeros(p, next);
 		ft_putstr_fd(new + count, 1, next);
 	}
 }
@@ -104,9 +81,10 @@ void ft_putspace_zero(char *new, t_list_printf *next)
 		ft_putzero(new + count, next);
 	else if (width > precision)
 	{
-		next->precision = variable > precision ? precision = 0 : precision - variable;
-		next->width = width - (next->precision + variable);
-		ft_check_precision_asterisk(variable, new, next);
+		precision = variable > precision ? precision = 0 :
+		precision - variable;
+		width = width - (precision + variable);
+		ft_check_ast(variable, precision, width, new, next);
 	}
 	else if (precision > width)
 		ft_putzero(new, next);
