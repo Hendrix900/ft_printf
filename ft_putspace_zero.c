@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 00:21:11 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/17 00:50:33 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/17 00:54:39 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,44 +41,29 @@ void ft_check_ast(size_t v,size_t p, size_t w, char *new, t_list_printf *next)
 	int count;
 
 	count = 0;
-//		printf("EL ancho es : %d\n", w);
-//		printf("LA precision es : %d\n", p);
-//		printf("LA variable es : %d\n", v);
 	if (next->flags == '-')
 		ft_check_prec(v, p, w, new, next);
-	if (next->neg == '-' && p <= 0)
-		{
+	else
+	{
+		if (next->neg == '-' && v < w)
+			w--;
 		ft_spaces(w, next);
-		count++;
-		ft_putchar_fd('-', 1, next);
-		ft_putstr_fd(new + count, 1, next);
-		}
-	else if (next->neg == '-' && p > 0)	
-		{
-		ft_spaces(w, next);
-		ft_putchar_fd('-', 1, next);
-		ft_zeros(p, next);
-		count++;
-		ft_putstr_fd(new + count, 1, next);
-		}
-		
-		/*
 		if (next->neg == '-' && w < p)
 		{
 			ft_putchar_fd('-', 1, next);
 			p++;
-			count++;
+			count = 1;
 		}
 		else if (next->neg == '-' && w > p)
 		{
 			ft_putchar_fd('-', 1, next);
 			p++;
-			count++;
+			count = 1;
 		}
 		ft_zeros(p, next);
-		ft_putstr_fd(new + count, 1, next);*/
+		ft_putstr_fd(new + count, 1, next);
+	}
 }
-
 
 void ft_putspace_zero(char *new, t_list_printf *next)
 {
@@ -96,7 +81,7 @@ void ft_putspace_zero(char *new, t_list_printf *next)
 	else if (width > precision)
 	{
 		precision = variable > precision ? precision = 0 :
-		precision - variable + 1;
+		precision - variable;
 		width = width - (precision + variable);
 		ft_check_ast(variable, precision, width, new, next);
 	}
