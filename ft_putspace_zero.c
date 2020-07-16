@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 00:21:11 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/16 22:12:32 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/17 00:32:05 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,24 +41,27 @@ void ft_check_ast(size_t v,size_t p, size_t w, char *new, t_list_printf *next)
 	int count;
 
 	count = 0;
+		printf("EL ancho es : %d\n", w);
+		printf("LA precision es : %d\n", p);
+		printf("LA variable es : %d\n", v);
 	if (next->flags == '-')
 		ft_check_prec(v, p, w, new, next);
 	else
 	{
-		if (next->neg == '-' && v < w)
+		if (next->neg == '-' && v > p)
 			w--;
 		ft_spaces(w, next);
 		if (next->neg == '-' && w < p)
 		{
 			ft_putchar_fd('-', 1, next);
 			p++;
-			count = 1;
+			count++;
 		}
 		else if (next->neg == '-' && w > p)
 		{
 			ft_putchar_fd('-', 1, next);
 			p++;
-			count = 1;
+			count++;
 		}
 		ft_zeros(p, next);
 		ft_putstr_fd(new + count, 1, next);
@@ -71,7 +74,6 @@ void ft_putspace_zero(char *new, t_list_printf *next)
 	size_t width;
 	size_t precision;
 	size_t variable;
-	int total;
 	int count;
 
 	count = 0;
