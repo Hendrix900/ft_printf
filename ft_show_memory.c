@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:19:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/16 12:22:03 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/16 12:26:53 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,5 +96,5 @@ void ft_show_memory(const char *s , t_list_printf *next)
 	else if ((next->flags == '0') || (next->punt == '.'))
 		ft_putzero(new, next);*/
 	else
-		ft_putstr_fd(new, 1, next);
+		ft_putstr_fd(ft_strjoin(null, new), 1, next);
 }
