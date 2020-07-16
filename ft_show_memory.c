@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:19:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/16 18:38:09 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/16 19:09:34 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,25 +25,28 @@ void ft_memory_zero_space(const char *s , t_list_printf *next, char null)
 
 void	ft_memoryzero(char *new, t_list_printf *next, char *null)
 {
-	size_t	width;
+	size_t	precision;
 	size_t	variable;
 	int		total;
-	int		count;
 
-	width = next->precision;
-	variable = ft_strlen(new);
-	if (variable >= width)
+	precision = next->precision;
+	variable = ft_strlen(new); //+ ft_strlen(null);
+	if (variable >= precision)
 		ft_putstr_fd(ft_strjoin(null, new), 1, next);
-	else if (variable < width)
+	else if (variable < precision)
 	{
-		total = width - variable;
-		if (next->punt == '.')
+		total = precision - variable;
+	//	printf ("El total es : %d\n", total);
+	//	printf ("La variable es : %d\n", variable);
+	//	printf("la precision es : %d", precision);
+		next->precision == '.' ? ft_putstr_fd(ft_strjoin(null, new), 1, next) :
 		ft_putstr_fd(null, 1, next);
 		while (total > 0)
 		{
-			ft_putchar_fd('0', 1, next);
+			ft_putchar_fd('0', 1,next);
 			total--;
 		}
+		next->precision == '.' ? ft_putstr_fd(ft_strjoin(null, new), 1, next) :
 		ft_putstr_fd(new, 1, next);
 	}
 }
@@ -61,7 +64,7 @@ void	ft_memoryspace(char *new, t_list_printf *next, char *null)
 	else if (variable < width)
 	{
 		total = width - variable;
-		next->flags != '-' ? ft_putstr_fd(null, 1, next) :
+		if (next->flags == '-')
 		ft_putstr_fd(ft_strjoin(null, new), 1, next);
 		while (total > 0)
 		{
@@ -69,7 +72,6 @@ void	ft_memoryspace(char *new, t_list_printf *next, char *null)
 			total--;
 		}
 		if (next->flags != '-')
-		next->flags != '-' ? ft_putstr_fd(new, 1, next) :
 		ft_putstr_fd(ft_strjoin(null, new), 1, next);
 	}
 }
