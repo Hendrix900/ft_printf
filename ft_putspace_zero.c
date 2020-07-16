@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 00:21:11 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/17 00:54:39 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/17 01:03:27 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,13 +48,13 @@ void ft_check_ast(size_t v,size_t p, size_t w, char *new, t_list_printf *next)
 		if (next->neg == '-' && v < w)
 			w--;
 		ft_spaces(w, next);
-		if (next->neg == '-' && w < p)
+		if (next->neg == '-' && w < p && p != 0)
 		{
 			ft_putchar_fd('-', 1, next);
 			p++;
 			count = 1;
 		}
-		else if (next->neg == '-' && w > p)
+		else if (next->neg == '-' && w > p && p != 0)
 		{
 			ft_putchar_fd('-', 1, next);
 			p++;
