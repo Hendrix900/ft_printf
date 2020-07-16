@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:19:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/16 12:30:00 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/16 12:39:35 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,14 @@ void	ft_memoryzero(char *new, t_list_printf *next, char *null)
 	else if (variable < width)
 	{
 		total = width - variable;
+		if (next->punt == '.')
+		ft_putstr_fd(null, 1, next);
 		while (total > 0)
 		{
 			ft_putchar_fd('0', 1, next);
 			total--;
 		}
-		ft_putstr_fd(ft_strjoin(null, new), 1, next);
+		ft_putstr_fd(new, 1, next);
 	}
 }
 
@@ -51,8 +53,8 @@ void	ft_memoryspace(char *new, t_list_printf *next, char *null)
 	else if (variable < width)
 	{
 		total = width - variable;
-		if (next->flags == '-')
-		ft_putstr_fd(ft_strjoin(null, new), 1, next);
+		if (next->flags == '-' || next->punt == '.')
+		ft_putstr_fd(null, 1, next);
 		while (total > 0)
 		{
 			ft_putchar_fd(' ', 1,next);
