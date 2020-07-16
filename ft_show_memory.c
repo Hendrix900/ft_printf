@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:19:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/16 19:49:56 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/16 20:08:50 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,10 @@ void ft_memory_zero_space(char *new, t_list_printf *next, char *null)
 	
 	precision = next->precision;
 	width = next->width;
-	variable = ft_strlen(new);
-	if (variable >= precision)
+	variable = ft_strlen(new) + ft_strlen(null);
+	if (width == precision)
+	ft_putstr_fd(ft_strjoin(null, new),1, next);
+	else if (variable >= precision)
 		ft_putstr_fd(ft_strjoin(null, new), 1, next);
 	else if (variable < precision)
 	{
@@ -116,7 +118,7 @@ void ft_show_memory(const char *s , t_list_printf *next)
 	/*if (new == '\0')
 		new = null;*/
 	if (next->flags >= 1 && next->punt > 1)
-		ft_memory_zero_space(new, next, new);
+		ft_putspace_zero(new, next);
 	else if ((next->flags == 1) || (next->flags == '-') || (next->flags == '*')) 
 		ft_memoryspace(new, next, null);
 	else if (next->punt == '.')
