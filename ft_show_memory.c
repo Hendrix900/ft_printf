@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:19:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/16 12:26:53 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/16 12:30:00 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	ft_memoryspace(char *new, t_list_printf *next, char *null)
 	{
 		total = width - variable;
 		if (next->flags == '-')
-			ft_putstr_fd(null, 1, next);
+		ft_putstr_fd(ft_strjoin(null, new), 1, next);
 		while (total > 0)
 		{
 			ft_putchar_fd(' ', 1,next);
