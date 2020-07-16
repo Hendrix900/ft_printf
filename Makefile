@@ -6,7 +6,7 @@
 #    By: ccastill <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/19 06:55:26 by ccastill          #+#    #+#              #
-#    Updated: 2020/07/16 05:12:34 by ccastill         ###   ########.fr        #
+#    Updated: 2020/07/16 05:59:58 by ccastill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,9 +20,9 @@ OBJS_PRINTF = ft_printf.o ft_flags.o ft_width.o ft_spaces.o ft_zeros.o ft_punt.o
 			  ft_putspace_zero.o ft_show_c.o ft_show_type.o ft_show_str.o ft_tohexa.o ft_show_hexa.o ft_show_memory.o ft_tomemory.o main.o \
 			  ft_putstr_fd.o ft_convert.o ft_show_u.o ft_itou.o ft_putchar_fd.o ft_precision.o\
 
-FUN_LIBFT = ./libft/ft_atoi.c ./libft/ft_itoa.c ./libft/ft_substr.c ./libft/ft_strlen.c  \
+FUN_LIBFT = ./libft/ft_atoi.c ./libft/ft_itoa.c ./libft/ft_substr.c ./libft/ft_strlen.c  ./libft/ft_strjoin.c \
 			
-OBJS_LIBFT = ./libft/ft_atoi.o ./libft/ft_itoa.o ./libft/ft_substr.o ./libft/ft_strlen.o  \
+OBJS_LIBFT = ./libft/ft_atoi.o ./libft/ft_itoa.o ./libft/ft_substr.o ./libft/ft_strlen.o ./libft/ft_strjoin.o \
 		
 CFLAGS = -c #-I -Wall -Wextra -Werror -g # Quitar la -g
 

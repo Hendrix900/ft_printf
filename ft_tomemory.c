@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:20:42 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/12 03:58:58 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/16 07:01:04 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_tomemory(long int nb)
 	long int			len;
 
 	base = "0123456789abcdef";
-	len = 2;
+	len = 0; // añadir 2
 	nbr = nb;
 	while (nb != 0)
 	{
@@ -29,14 +29,15 @@ char	*ft_tomemory(long int nb)
 	}
 	if (nbr == 0)
 		len++;
-	hex = (char *)malloc(sizeof(char) * (len + 1));
+	hex = (char *)malloc(sizeof(char)); //* (len + 1));
 	hex[len] = '\0';
 	while (nbr != 0 || len > 0)
 	{
 		hex[--len] = base[nbr % 16];
 		nbr = nbr / 16;
 	}
+	/*
 	hex[0] = '0';
-	hex[1] = 'x';
+	hex[1] = 'x';*/
 	return (hex);
 }
