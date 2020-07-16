@@ -6,16 +6,18 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 00:21:11 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/17 01:15:20 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/17 01:28:11 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_check_prec(size_t v, size_t p, size_t w, char *new, t_list_printf *next)
+void	ft_check_prec(size_t p, size_t w, char *new, t_list_printf *next)
 {
-	int count;
+	int		count;
+	size_t	v;
 
+	v = ft_strlen(new);
 	count = 0;
 	if (next->neg == '-' && v < w)
 		w--;
@@ -36,13 +38,15 @@ void	ft_check_prec(size_t v, size_t p, size_t w, char *new, t_list_printf *next)
 	ft_spaces(w, next);
 }
 
-void	ft_check_ast(size_t v, size_t p, size_t w, char *new, t_list_printf *next)
+void	ft_check_ast(size_t p, size_t w, char *new, t_list_printf *next)
 {
-	int count;
+	int		count;
+	size_t	v;
 
+	v = ft_strlen(new);
 	count = 0;
 	if (next->flags == '-')
-		ft_check_prec(v, p, w, new, next);
+		ft_check_prec(p, w, new, next);
 	else
 	{
 		if (next->neg == '-' && v < w)
@@ -67,10 +71,10 @@ void	ft_check_ast(size_t v, size_t p, size_t w, char *new, t_list_printf *next)
 
 void	ft_putspace_zero(char *new, t_list_printf *next)
 {
-	size_t width;
-	size_t precision;
-	size_t variable;
-	int count;
+	size_t	width;
+	size_t	precision;
+	size_t	variable;
+	int		count;
 
 	count = 0;
 	width = next->width;
@@ -80,9 +84,12 @@ void	ft_putspace_zero(char *new, t_list_printf *next)
 		ft_putzero(new + count, next);
 	else if (width > precision)
 	{
-		precision = variable > precision ? precision = 0 : precision - variable;
+		if (variable > precision)
+			precision = 0;
+		else
+			precision = precision - variable;
 		width = width - (precision + variable);
-		ft_check_ast(variable, precision, width, new, next);
+		ft_check_ast(precision, width, new, next);
 	}
 	else if (precision > width)
 		ft_putzero(new, next);
