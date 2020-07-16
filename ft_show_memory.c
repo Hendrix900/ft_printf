@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:19:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/16 18:36:08 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/16 18:38:09 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ void	ft_memoryspace(char *new, t_list_printf *next, char *null)
 			total--;
 		}
 		if (next->flags != '-')
+		next->flags != '-' ? ft_putstr_fd(new, 1, next) :
 		ft_putstr_fd(ft_strjoin(null, new), 1, next);
 	}
 }
