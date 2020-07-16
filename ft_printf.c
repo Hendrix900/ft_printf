@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 01:09:36 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/16 05:27:04 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/16 06:45:49 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,16 @@ int check_str(const char *s, t_list_printf *next)
 	next->punt = ft_punt(s, next);
 	next->precision = ft_precision(s, next);
 	next->type = ft_type(s, next);
+	printf("El ancho es : %d\n", next->width);//
+	printf("LA precision es : %d\n", next->precision);//
+	printf("LAs flags son : %d\n", next->flags);//
+	printf("EL punt es: %c\n", next->punt);//
 	if (next->ar_neg == 1)
 		next->flags = '-';
 	if (next->type == 0)
 		return (-1);
 	else
 		ft_show_type(s, next);
-//	printf("El ancho es : %d\n", next->width);//
-//	printf("LA precision es : %d\n", next->precision);//
-//	printf("LAs flags son : %c\n", next->flags);//
-//	printf("EL punt es: %c\n", next->punt);//
-	//printf("El valor de d : %d\n", next->i);//
-	//next->type = ft_type(s, next);
 	return (0);
 }
 
