@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 11:59:24 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/15 22:14:29 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/16 05:22:43 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ int	ft_flags(const char *s, t_list_printf *next)
 		return(ft_flags0(s,next));
 	else if (s[next->len] == '*')
 	{
-		next->len++;
 		return ('*');
 	}
 	else if (s[next->len] >= '1' && s[next->len] <= '9')

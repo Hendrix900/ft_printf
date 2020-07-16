@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 01:09:36 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/16 05:15:08 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/16 05:21:22 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int check_str(const char *s, t_list_printf *next)
 //	printf("LA precision es : %d\n", next->precision);//
 //	printf("LAs flags son : %c\n", next->flags);//
 //	printf("EL punt es: %c\n", next->punt);//
-//	printf("El valor de d : %d\n", next->i);//
+	//printf("El valor de d : %d\n", next->i);//
 	//next->type = ft_type(s, next);
 	return (0);
 }
