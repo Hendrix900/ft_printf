@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 00:21:11 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/17 19:03:25 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/17 19:12:09 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,10 @@ void	ft_check_ast(size_t p, size_t w, char *new, t_list_printf *next)
 {
 	int		count;
 	size_t	v;
-	printf("El ancho es : %d\n", w);//
-	printf("LA precision es : %d\n", p);//
-	printf("LAs flags son : %d\n", next->flags);//
-	printf("EL punt es: %c\n", next->punt);//
+//	printf("El ancho es : %d\n", w);//
+//	printf("LA precision es : %d\n", p);//
+//	printf("LAs flags son : %d\n", next->flags);//
+//	printf("EL punt es: %c\n", next->punt);//
 	v = ft_strlen(new);
 	count = 0;
 	if (next->flags == '-')
