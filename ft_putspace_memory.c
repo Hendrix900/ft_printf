@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 00:21:11 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/17 23:32:13 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/17 23:43:02 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,10 @@ void	ft_check_w_p(size_t p, size_t w, char *new, t_list_printf *next)
 		ft_put_w_p(p, w, new, next);
 	}
 	else if (p > w)
+	{
+		ft_putstr_fd("0x", 1, next);
 		ft_putzero(new, next);
+	}	
 }
 
 void	ft_putspace_memory(char *new, t_list_printf *next)
