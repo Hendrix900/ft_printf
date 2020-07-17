@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/21 19:48:56 by carlos            #+#    #+#             */
-/*   Updated: 2020/07/18 00:50:28 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 01:50:41 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,24 +98,64 @@ int main ()
 
     ft_printf("%5.0d\n", 0);
     printf("%5.0d\n", 0);
-
-    ft_printf("%07i", -54);
-    printf("%07i", -54);
-*/
-
-    f = ft_printf("%10%\n");
-    g = printf("%10%\n");
+*/  
+    f = ft_printf("%.10%\n");
+    g = printf("%.10%\n");
 
     printf("%d\n", f);
     printf("%d\n", g);
 
-    f = ft_printf("%-2%\n");
-    g = printf("%-2%\n");
+    f = ft_printf("%.2%\n");
+    g = printf("%.2%\n");
+
+    printf("%d\n", f);
+    printf("%d\n", g);
+
+    f = ft_printf("%-1.10%\n");
+    g = printf("%-1.10%\n");
+
+     printf("%d\n", f);
+    printf("%d\n", g);
+
+    f =  ft_printf("%1.2%\n");
+    g = printf("%1.2%\n");
+
+
+    printf("%d\n", f);
+    printf("%d\n", g);
+
+    f =  ft_printf("%1.10%\n");
+    g = printf("%1.10%\n");
+
+    printf("%d\n", f);
+    printf("%d\n", g);
+
+    f = ft_printf("%2.2%\n");
+    g = printf("%2.2%\n");
+    
+    printf("%d\n", f);
+    printf("%d\n", g);
+
+    f = ft_printf("%2.10%\n");
+    g = printf("%2.10%\n");
+
+    printf("%d\n", f);
+    printf("%d\n", g);
+    
+    f = ft_printf("%10.2%\n");
+    g = printf("%10.2%\n");
+
+    printf("%d\n", f);
+    printf("%d\n", g);
+
+    f =  ft_printf("%10.10%\n");
+    g = printf("%10.10%\n");
+    
+    printf("%d\n", f);
+    printf("%d\n", g);
+
 
   /*  "%10.5i", -216*/
-
-    printf("%d\n", f);
-    printf("%d\n", g);
 /*
     f = ft_printf("%-*s\n", 32, "abc");
     g = printf("%-*s\n", 32, "abc");
