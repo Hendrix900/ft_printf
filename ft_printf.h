@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 21:55:45 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/17 12:39:03 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/17 23:15:34 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,17 +64,6 @@ typedef struct		s_list_printf
  char				*ft_itou(unsigned long int n);
  void				ft_putchar_fd(char c, int fd, t_list_printf *next);
  int				ft_precision(const char *s, t_list_printf *next);
-
-
-
-
-
-
-
-
-
-
-
-
+ void				ft_putspace_memory(char *new, t_list_printf *next);
 
 #endif
