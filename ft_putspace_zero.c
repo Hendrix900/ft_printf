@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 00:21:11 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/17 19:12:09 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/17 19:15:00 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,7 @@ void	ft_check_prec(size_t p, size_t w, char *new, t_list_printf *next)
 
 	v = ft_strlen(new);
 	count = 0;
-	if (next->neg == 1 /*&& v > w*/)
-	{
-		ft_putchar_fd('-', 1, next);
-		count = 1;
-	}
-	else if (next->neg == 1 /*&& w > p*/)
+	if (next->neg == 1 )
 	{
 		ft_putchar_fd('-', 1, next);
 		count = 1;
