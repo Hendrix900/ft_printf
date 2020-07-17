@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 01:09:36 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/16 20:58:37 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/17 14:04:34 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int check_str(const char *s, t_list_printf *next)
 //	printf("LA precision es : %d\n", next->precision);//
 //	printf("LAs flags son : %d\n", next->flags);//
 //	printf("EL punt es: %c\n", next->punt);//
+//	printf("El next->neg es %d\n", next->neg);
 	if (next->ar_neg == 1)
 		next->flags = '-';
 	if (next->type == 0)

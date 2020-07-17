@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 00:21:11 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/17 11:52:52 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/17 14:04:20 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_check_prec(size_t p, size_t w, char *new, t_list_printf *next)
 
 	v = ft_strlen(new);
 	count = 0;
-	if (next->neg == '-' && v < w)
+	if (next->neg == '-') /*&& v < w*/
 		w--;
 	if (next->neg == '-' && v > w)
 	{
@@ -52,13 +52,18 @@ void	ft_check_ast(size_t p, size_t w, char *new, t_list_printf *next)
 	int		count;
 	size_t	v;
 
+//	printf("El ancho es : %d\n", w);//
+//	printf("LA precision es : %d\n", p);//
+//	printf("LAs flags son : %d\n", next->flags);//
+//	printf("EL punt es: %c\n", next->punt);//
+	
 	v = ft_strlen(new);
 	count = 0;
 	if (next->flags == '-')
 		ft_check_prec(p, w, new, next);
 	else
 	{
-		if (next->neg == '-' && v < w)
+		if (next->neg == '-') /*&& v < w*/
 			w--;
 		ft_spaces(w, next);
 		if (next->neg == '-' && p != 0)
