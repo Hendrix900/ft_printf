@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 00:21:11 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/17 17:17:20 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/17 19:03:25 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@ void	ft_check_prec(size_t p, size_t w, char *new, t_list_printf *next)
 
 	v = ft_strlen(new);
 	count = 0;
-	if (next->neg == 1 && v > w)
+	if (next->neg == 1 /*&& v > w*/)
 	{
 		ft_putchar_fd('-', 1, next);
 		count = 1;
 	}
-	else if (next->neg == 1 && w > p)
+	else if (next->neg == 1 /*&& w > p*/)
 	{
 		ft_putchar_fd('-', 1, next);
 		count = 1;
@@ -47,10 +47,10 @@ void	ft_check_ast(size_t p, size_t w, char *new, t_list_printf *next)
 {
 	int		count;
 	size_t	v;
-//	printf("El ancho es : %d\n", w);//
-//	printf("LA precision es : %d\n", p);//
-//	printf("LAs flags son : %d\n", next->flags);//
-//	printf("EL punt es: %c\n", next->punt);//
+	printf("El ancho es : %d\n", w);//
+	printf("LA precision es : %d\n", p);//
+	printf("LAs flags son : %d\n", next->flags);//
+	printf("EL punt es: %c\n", next->punt);//
 	v = ft_strlen(new);
 	count = 0;
 	if (next->flags == '-')
@@ -72,9 +72,7 @@ void	ft_check_ast(size_t p, size_t w, char *new, t_list_printf *next)
 void	ft_check_s_z(size_t p, size_t w, char *new, t_list_printf *next)
 {
 	size_t	variable;
-	int		count;
 
-	count = 0;
 	variable = ft_strlen(new);
 	if (next->neg == 1)
 	{
@@ -82,7 +80,7 @@ void	ft_check_s_z(size_t p, size_t w, char *new, t_list_printf *next)
 		p++;
 	}
 	if (w == p)
-		ft_putzero(new + count, next);
+		ft_putzero(new, next);
 	else if (w > p)
 	{
 		if ((variable + next->neg) > p)
