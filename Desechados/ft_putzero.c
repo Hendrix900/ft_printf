@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 23:34:09 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/17 12:33:42 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/17 16:51:44 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_putzero_precision(char *new, t_list_printf *next)
 	width = next->precision;
 	variable = ft_strlen(new);
 	count = 0;
-	if (next->neg == '-' || next->type == 'p')
+	if (next->neg == 1 || next->type == 'p')
 	{
 		next->type == 'p' ? ft_putstr_fd("0x", 1, next) :
 		ft_putchar_fd('-', 1, next); 
@@ -50,7 +50,7 @@ void	ft_putzero_0(char *new, t_list_printf *next)
 	precision = next->precision;
 	variable = ft_strlen(new);
 	count = 0;
-	if (next->neg == '-' || next->type == 'p')
+	if (next->neg == 1 || next->type == 'p')
 	{
 		next->type == 'p' ? ft_putstr_fd("0x", 1, next) : ft_putchar_fd('-', 1, next); 
 		count = 1;

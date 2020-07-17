@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 03:56:58 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/15 20:22:39 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/17 16:50:49 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void ft_show_hexa(const char *s , t_list_printf *next)
 		new[0] = '\0';
 	}
 	if (new[0] == '-')
-		next->neg = '-';
+		next->neg = 1;
 	if (next->flags >= 1 && next->punt > 1)
 		ft_putspace_zero(new, next);
 	else if ((next->flags == 1) || (next->flags == '-') || (next->flags == '*')) 

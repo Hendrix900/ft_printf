@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 01:09:36 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/17 14:04:34 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/17 16:49:45 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int check_str(const char *s, t_list_printf *next)
 	next->punt = 0;
 	next->type = 0;
 	next->precision = 0;
+	next->neg = 0;
 	next->flags = ft_flags(s, next);
 	next->width = ft_width(s, next);
 	next->punt = ft_punt(s, next);

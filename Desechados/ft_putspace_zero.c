@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 00:21:11 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/17 13:13:51 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/17 16:52:01 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ void	ft_check_prec(size_t p, size_t w, char *new, t_list_printf *next)
 
 	v = ft_strlen(new);
 	count = 0;
-	if (next->neg == '-' && v < w)
+	if (next->neg == 1 && v < w)
 		w--;
-	if (next->neg == '-')                             // && v > w || next->neg == '-' && w > p)
+	if (next->neg == 1)                             // && v > w || next->neg == '-' && w > p)
 	{
 		next->type == 'p' ? ft_putstr_fd("0x", 1, next) :
 		ft_putchar_fd('-', 1, next); 
@@ -55,10 +55,10 @@ void	ft_check_ast(size_t p, size_t w, char *new, t_list_printf *next)
 		ft_check_prec(p, w, new, next);
 	else
 	{
-		if (next->neg == '-' && v < w)
+		if (next->neg == 1 && v < w)
 			w--;
 		ft_spaces(w, next);
-		if (next->neg == '-' && p != 0 || next->type == 'p' && p != 0)
+		if (next->neg == 1 && p != 0 || next->type == 'p' && p != 0)
 		{
 			next->type == 'p' ? ft_putstr_fd("0x", 1, next) :
 			ft_putchar_fd('-', 1, next); 
