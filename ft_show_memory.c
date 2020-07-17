@@ -6,40 +6,11 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:19:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/17 10:18:19 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/17 11:36:23 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-void ft_memory_zero_space(char *new, t_list_printf *next, char *null)
-{
-	size_t	precision;
-	size_t	width;
-	size_t	variable;
-	int		total;
-	
-	precision = next->precision;
-	width = next->width;
-	variable = ft_strlen(new) + ft_strlen(null);
-	if (width == precision)
-	ft_putstr_fd(ft_strjoin(null, new),1, next);
-	else if (variable >= precision)
-		ft_putstr_fd(ft_strjoin(null, new), 1, next);
-	else if (variable < precision)
-	{
-		total = precision - variable;
-		next->precision == '.' ? ft_putstr_fd(ft_strjoin(null, new), 1, next) :
-		ft_putstr_fd(null, 1, next);
-		while (total > 0)
-		{
-			ft_putchar_fd('0', 1,next);
-			total--;
-		}
-		next->precision == '.' ? ft_putstr_fd(ft_strjoin(null, new), 1, next) :
-		ft_putstr_fd(new, 1, next);
-	}
-}
 
 void	ft_memoryzero(char *new, t_list_printf *next, char *null)
 {
