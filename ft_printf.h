@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 21:55:45 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/16 05:12:20 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/17 12:39:03 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ typedef struct		s_list_printf
 	int				type; // Servirá para comprobar los tipos.
 	int 			neg; // variable para números negativos
 	int				ar_neg;
+	int				memory;
 	int				len; // Posición de la cadena
 	int				i; // %i o %d
 	int				c; // %c Caracteres ASCII
