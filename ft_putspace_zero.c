@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 00:21:11 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/17 19:28:30 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/17 19:34:22 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,47 +19,23 @@
 	null = "0x";
 	ft_putstr_fd(ft_strjoin(null, new), 1, next);
 }*/
-/*
-void	ft_check_prec(size_t p, size_t w, char *new, t_list_printf *next)
-{
-	int		count;
-	size_t	v;
 
-	v = ft_strlen(new);
+void	ft_check_ast(size_t p, size_t w, char *new, t_list_printf *next)
+{
+	int count;
+
 	count = 0;
-	if (next->neg == 1 )
+	if (next->flags != '-')
+		ft_spaces(w, next);
+	if (next->neg == 1) 	
 	{
 		ft_putchar_fd('-', 1, next);
 		count = 1;
 	}
 	ft_zeros(p, next);
 	ft_putstr_fd(new + count, 1, next);
-	ft_spaces(w, next);
-}
-*/
-void	ft_check_ast(size_t p, size_t w, char *new, t_list_printf *next)
-{
-	int		count;
-	size_t	v;
-	
-	v = ft_strlen(new);
-	count = 0;
-	/*if (next->flags == '-')
-		ft_check_prec(p, w, new, next);*/
-/*	else
-	{*/
-		if (next->flags != '-')
+	if (next->flags == '-')
 		ft_spaces(w, next);
-		if (next->neg == 1) /*&& p != 0*/
-		{
-			ft_putchar_fd('-', 1, next);
-			count = 1;
-		}
-		ft_zeros(p, next);
-		ft_putstr_fd(new + count, 1, next);
-		if (next->flags == '-')
-			ft_spaces(w, next);
-	/*}*/
 }
 
 void	ft_check_s_z(size_t p, size_t w, char *new, t_list_printf *next)
