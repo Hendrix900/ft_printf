@@ -6,19 +6,11 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 00:21:11 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/17 19:34:22 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/17 19:41:19 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-/*void	print_memory(char *new, t_list_printf *next)
-{
-	char	*null;
-
-	null = "0x";
-	ft_putstr_fd(ft_strjoin(null, new), 1, next);
-}*/
 
 void	ft_check_ast(size_t p, size_t w, char *new, t_list_printf *next)
 {
@@ -27,7 +19,7 @@ void	ft_check_ast(size_t p, size_t w, char *new, t_list_printf *next)
 	count = 0;
 	if (next->flags != '-')
 		ft_spaces(w, next);
-	if (next->neg == 1) 	
+	if (next->neg == 1)
 	{
 		ft_putchar_fd('-', 1, next);
 		count = 1;
