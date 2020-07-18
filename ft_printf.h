@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 21:55:45 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/18 19:03:04 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 19:04:37 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void				ft_putspace(char *new, t_list_printf *next);
 void				ft_putzero(char *new, t_list_printf *next);
 void				ft_putspace_zero(char *new, t_list_printf *next);
 void				ft_show_c(t_list_printf *next);
-void				ft_show_type(const char *s, t_list_printf *next);
+void				ft_show_type(t_list_printf *next);
 void				ft_show_str(t_list_printf *next);
 void				ft_show_hexa(t_list_printf *next);
 void				ft_show_memory(t_list_printf *next);
