@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/16 05:05:27 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/19 01:24:38 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/19 01:31:00 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,15 @@ int		ft_precision(const char *s, t_list_printf *next)
 	{
 		if (s[next->len] >= '0' && s[next->len] <= '9')
 		{
-			new = ft_substr(s, next->len, ft_strlen_str(s, next->len));
+			new = ft_substr(s, next->len,
+			ft_strlen_str_precision(s, next->len));
 			next->width = ft_atoi(new);
 			free(new);
 			new = NULL;
-			next->len += ft_strlen_str(s, next->len);
+			next->len += ft_strlen_str_precision(s, next->len);
 		}
 		else if (s[next->len] == '*')
-			ft_asterisk(next);
+			ft_asterisk_precision(next);
 	}
 	return (next->precision);
 }
