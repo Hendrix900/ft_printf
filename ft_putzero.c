@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 23:34:09 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/18 02:26:07 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 02:45:17 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	ft_putzero_precision(char *new, t_list_printf *next)
 	int		total;
 	int		count;
 
+	if (next->type == '%')
+		next->precision = 0;
 	width = next->precision;
 	variable = ft_strlen(new);
 	count = 0;
