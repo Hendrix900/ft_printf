@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 01:09:36 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/18 18:20:23 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 19:05:37 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int		check_str(const char *s, t_list_printf *next)
 	if (next->type == 0)
 		return (-1);
 	else
-		ft_show_type(s, next);
+		ft_show_type(next);
 	return (0);
 }
 
