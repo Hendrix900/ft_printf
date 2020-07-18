@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 00:21:11 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/17 20:01:26 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 02:25:06 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 void	ft_check_ast(size_t p, size_t w, char *new, t_list_printf *next)
 {
 	int count;
-
+	
+	if (next->type == '%')
+		p = 0;
 	count = 0;
 	if (next->flags != '-')
 		ft_spaces(w, next);

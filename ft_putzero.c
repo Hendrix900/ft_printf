@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 23:34:09 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/17 23:40:24 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 02:26:07 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ void	ft_putzero_0(char *new, t_list_printf *next)
 	precision = next->precision;
 	variable = ft_strlen(new);
 	count = 0;
+	if (next->type == '%')
+		precision = 0;
 	if (next->neg == 1) //añadido recientemente
 	{
 		ft_putchar_fd('-', 1, next); //next->type == 'p' ? ft_putstr_fd("0x",1,next) :
