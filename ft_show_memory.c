@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:19:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/18 03:07:02 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 03:18:54 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,10 @@ void	ft_memorypunt(char *new, t_list_printf *next, char *null)
 	else if (variable < precision)
 	{
 		total = precision - variable;
-		next->precision == '.' ? ft_putstr_fd(ft_strjoin(null, new), 1, next) :
+		next->punt == '.' ? ft_putstr_fd(ft_strjoin(null, new), 1, next) :
 		ft_putstr_fd(null, 1, next);
 		ft_zeros(total, next);
-		next->precision == '.' ? ft_putstr_fd(ft_strjoin(null, new), 1, next) :
+		next->punt == '.' ? ft_putstr_fd(ft_strjoin(null, new), 1, next) :
 		ft_putstr_fd(new, 1, next);
 	}
 }
