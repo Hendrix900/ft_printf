@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:19:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/18 19:02:33 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 20:29:57 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	ft_memorypunt(char *new, t_list_printf *next, char *null)
 	else if (variable < precision)
 	{
 		total = precision - variable;
-		next->punt == '.' ? ft_putstr_fd(ft_strjoin(null, new), 1, next) :// cambiado next->precision por punt
+		next->punt == '.' ? ft_putstr_fd(ft_strjoin(null, new), 1, next) :
 		ft_putstr_fd(null, 1, next);
 		ft_zeros(total, next);
 		next->punt == '.' ? ft_putstr_fd(ft_strjoin(null, new), 1, next) :
