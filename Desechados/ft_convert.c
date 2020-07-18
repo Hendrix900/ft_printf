@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/10 04:30:51 by carlos            #+#    #+#             */
-/*   Updated: 2020/07/16 04:59:33 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/19 01:00:50 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int	ft_convert(const char *s, t_list_printf *next)
 		return (n);
 	}
 	else if (s[next->len] == '*')
-	{
+
 		return(ft_asterisk_1(next));
 	}
 	else if (s[next->len] == '*' && next->flags == '0')

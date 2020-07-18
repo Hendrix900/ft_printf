@@ -6,83 +6,76 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 23:34:09 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/18 02:45:17 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/19 00:52:55 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putzero_precision(char *new, t_list_printf *next)
+void	ft_putzero_precision(size_t w, char *new, t_list_printf *next)
 {
-	size_t	width;
 	size_t	variable;
 	int		total;
 	int		count;
 
 	if (next->type == '%')
 		next->precision = 0;
-	width = next->precision;
+	w = next->precision;
 	variable = ft_strlen(new);
 	count = 0;
 	if (next->neg == 1)
 	{
-		ft_putchar_fd('-', 1, next); //next->type == 'p' ? ft_putstr_fd("0x",1,next) :
+		ft_putchar_fd('-', 1, next);
 		variable--;
 		count = 1;
 	}
-	if (variable >= width)
+	if (variable >= w)
 		ft_putstr_fd(new + count, 1, next);
-	else if (variable < width)
+	else if (variable < w)
 	{
-		total = width - variable;
-		while (total > 0)
-		{
-			ft_putchar_fd('0', 1, next);
-			total--;
-		}
+		total = w - variable;
+		ft_zeros(total, next);
 		ft_putstr_fd(new + count, 1, next);
 	}
 }
 
-void	ft_putzero_0(char *new, t_list_printf *next)
+void	ft_putzero_0(size_t p, size_t w, char *new, t_list_printf *next)
 {
-	size_t	width;
 	size_t	variable;
-	size_t	precision;
 	int		total;
 	int		count;
-	width = next->width;
-	precision = next->precision;
+
 	variable = ft_strlen(new);
 	count = 0;
 	if (next->type == '%')
-		precision = 0;
-	if (next->neg == 1) //añadido recientemente
+		p = 0;
+	if (next->neg == 1)
 	{
-		ft_putchar_fd('-', 1, next); //next->type == 'p' ? ft_putstr_fd("0x",1,next) :
+		ft_putchar_fd('-', 1, next);
 		count = 1;
 	}
-	if ((variable >= width) || (variable >= width && precision < variable)) // AÑADIDO RECIENTEMENTE (variable >= width )
+	if ((variable >= w) || (variable >= w && p < variable))
 		ft_putstr_fd(new + count, 1, next);
-	else if ((variable < width) || (precision > variable))
+	else if ((variable < w) || (p > variable))
 	{
-		if (precision > width && precision > variable)
-			total = width;
+		if (p > w && p > variable)
+			total = w;
 		else
-			total = precision > 0 ? precision - variable : width - variable; // precision - variable
-		while (total > 0)
-		{
-			ft_putchar_fd('0', 1, next);
-			total--;
-		}
+			total = p > 0 ? p - variable : w - variable;
+		ft_zeros(total, next);
 		ft_putstr_fd(new + count, 1, next);
 	}
 }
 
 void	ft_putzero(char *new, t_list_printf *next)
 {
+	size_t	width;
+	size_t	precision;
+
+	width = next->width;
+	precision = next->precision;
 	if (next->flags == '0' && next->punt != '.')
-		ft_putzero_0(new, next);
+		ft_putzero_0(precision, width, new, next);
 	else
-		ft_putzero_precision(new, next);
+		ft_putzero_precision(width, new, next);
 }

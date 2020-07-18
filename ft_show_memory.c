@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:19:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/18 20:29:57 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/19 00:56:43 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,28 +33,26 @@ void	ft_memoryzero(char *new, t_list_printf *next, char *null)
 	}
 }
 
-void	ft_memorypunt(char *new, t_list_printf *next, char *null)
+void	ft_memorypunt(char *new, size_t p, t_list_printf *next, char *null)
 {
-	size_t	precision;
 	size_t	variable;
 	int		total;
 
-	precision = next->precision;
 	variable = ft_strlen(new);
 	if (new[0] == '0')
-		total = precision;
+		total = p;
 	else
-		total = precision - variable;
+		total = p - variable;
 	if (new[0] == '0')
 	{
 		ft_putstr_fd(null, 1, next);
 		ft_zeros(total, next);
 	}
-	else if (variable >= precision)
+	else if (variable >= p)
 		ft_putstr_fd(ft_strjoin(null, new), 1, next);
-	else if (variable < precision)
+	else if (variable < p)
 	{
-		total = precision - variable;
+		total = p - variable;
 		next->punt == '.' ? ft_putstr_fd(ft_strjoin(null, new), 1, next) :
 		ft_putstr_fd(null, 1, next);
 		ft_zeros(total, next);
@@ -88,7 +86,9 @@ void	ft_show_memory(t_list_printf *next)
 {
 	char	*new;
 	char	*null;
+	size_t	precision;
 
+	precision = next->precision;
 	null = "0x";
 	new = ft_tomemory(next->p);
 	if (next->flags >= 1 && next->punt > 1)
@@ -96,7 +96,7 @@ void	ft_show_memory(t_list_printf *next)
 	else if ((next->flags == 1) || (next->flags == '-') || (next->flags == '*'))
 		ft_memoryspace(new, next, null);
 	else if (next->punt == '.')
-		ft_memorypunt(new, next, null);
+		ft_memorypunt(precision, new, next, null);
 	else if (next->flags == '0')
 		ft_memoryzero(new, next, null);
 	else

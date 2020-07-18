@@ -6,26 +6,26 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 05:50:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/17 01:40:13 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/19 01:12:38 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	ft_strlen_print_f(const char *s, int l)
+size_t	ft_strlen_str(const char *s, int l)
 {
-	size_t q;
+	size_t count;
 
-	q = 0;
+	count = 0;
 	while (s[l] >= '0' && s[l] <= '9')
 	{
-		q++;
+		count++;
 		l++;
 	}
-	return (q);
+	return (count);
 }
 
-void	ft_axterix(t_list_printf *next)
+void	ft_asterisk(t_list_printf *next)
 {
 	next->width = va_arg(next->args, int);
 	if (next->width < 0)
@@ -38,24 +38,22 @@ void	ft_axterix(t_list_printf *next)
 
 int		ft_width(const char *s, t_list_printf *next)
 {
-	char	*substr;
-	size_t	q;
+	char	*new;
 
 	next->ar_neg = 0;
-	if (next->flags == '-' || next->flags == '0' || next->flags == 1
-		|| next->flags == '*')
+	if (next->flags == '-' || next->flags == '0' || next->flags == 1 ||
+	next->flags == '*')
 	{
 		if (s[next->len] >= '0' && s[next->len] <= '9')
 		{
-			substr = ft_substr(s, next->len,
-					(q = ft_strlen_print_f(s, next->len)));
-			next->width = ft_atoi(substr);
-			free(substr);
-			substr = NULL;
-			next->len += q;
+			new = ft_substr(s, next->len, ft_strlen_str(s, next->len));
+			next->width = ft_atoi(new);
+			free(new);
+			new = NULL;
+			next->len += ft_strlen_str(s, next->len);
 		}
 		else if (s[next->len] == '*')
-			ft_axterix(next);
+			ft_asterisk(next);
 	}
 	return (next->width);
 }
