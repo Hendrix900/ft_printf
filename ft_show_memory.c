@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:19:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/18 06:21:20 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 06:35:37 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,19 +39,23 @@ void	ft_memorypunt(char *new, t_list_printf *next, char *null)
 	size_t	variable;
 	int		total;
 
-	if (new[0] == '0')
-	new[0] = '\0';  
 	precision = next->precision;
 	variable = ft_strlen(new);
+	total = precision - variable;
 	if (variable >= precision)
 		ft_putstr_fd(ft_strjoin(null, new), 1, next);
+	else if (new[0] == '0' || new[0] == 0)
+	{
+		new[0] = '\0';
+		ft_zeros(total, next);
+		ft_putstr_fd(null, 1, next);
+	}
 	else if (variable < precision)
 	{
-		total = precision - variable;
 		next->punt == '.' ? ft_putstr_fd(ft_strjoin(null, new), 1, next) : // cambiado next->precision por punt
 		ft_putstr_fd(null, 1, next);
 		ft_zeros(total, next);
-		next->punt == '.' || new[0] != '\0' ? ft_putstr_fd(ft_strjoin(null, new), 1, next) :
+		next->punt == '.' ? ft_putstr_fd(ft_strjoin(null, new), 1, next) :
 		ft_putstr_fd(new, 1, next);
 	}
 }
