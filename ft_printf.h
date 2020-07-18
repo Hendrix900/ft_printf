@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 21:55:45 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/18 19:07:53 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 19:42:25 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,6 @@ void				ft_show_u(t_list_printf *next);
 char				*ft_tomemory(long int nb);
 char				*ft_tohexa(unsigned int nb, char x);
 void				ft_putstr_fd(char *s, int fd, t_list_printf *next);
-int					ft_convert(const char *s, t_list_printf *next);
 char				*ft_itou(unsigned long int n);
 void				ft_putchar_fd(char c, int fd, t_list_printf *next);
 int					ft_precision(const char *s, t_list_printf *next);
