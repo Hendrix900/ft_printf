@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:19:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/18 06:57:23 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 07:03:29 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,18 +41,11 @@ void	ft_memorypunt(char *new, t_list_printf *next, char *null)
 
 	precision = next->precision;
 	variable = ft_strlen(new);
-	total = precision - variable;
 	if (variable >= precision)
 		ft_putstr_fd(ft_strjoin(null, new), 1, next);
-	else if (new[0] == '0' || new[0] == 0 || new[0] == NULL)
-	{
-		//new[0] = '\0';
-		printf("Entró en el punt");
-		ft_putstr_fd(null, 1, next);
-		ft_zeros(total, next);
-	}
 	else if (variable < precision)
 	{
+		total = precision - variable;
 		next->punt == '.' ? ft_putstr_fd(ft_strjoin(null, new), 1, next) : // cambiado next->precision por punt
 		ft_putstr_fd(null, 1, next);
 		ft_zeros(total, next);
@@ -72,14 +65,9 @@ void	ft_memoryspace(char *new, t_list_printf *next, char *null)
 	total = width - variable;
 	if (variable >= width)
 		ft_putstr_fd(ft_strjoin(null, new), 1, next);
-	else if (new[0] == '0' || new[0] == 0 || new[0] == NULL)
-	{
-		printf("Entró en el espacio");
-		ft_spaces(total, next);
-		ft_putstr_fd(null, 1, next);
-	}
 	else if (variable < width)
 	{
+		total = width - variable;
 		if (next->flags == '-')
 		ft_putstr_fd(ft_strjoin(null, new), 1, next);
 		ft_spaces(total, next);
