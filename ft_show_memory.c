@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:19:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/18 06:52:48 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 06:57:23 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ void	ft_memorypunt(char *new, t_list_printf *next, char *null)
 		ft_putstr_fd(ft_strjoin(null, new), 1, next);
 	else if (new[0] == '0' || new[0] == 0 || new[0] == NULL)
 	{
-		printf("ENtrar");
-		new[0] = '\0';
+		//new[0] = '\0';
+		printf("Entró en el punt");
 		ft_putstr_fd(null, 1, next);
 		ft_zeros(total, next);
 	}
@@ -74,7 +74,7 @@ void	ft_memoryspace(char *new, t_list_printf *next, char *null)
 		ft_putstr_fd(ft_strjoin(null, new), 1, next);
 	else if (new[0] == '0' || new[0] == 0 || new[0] == NULL)
 	{
-		new[0] = '\0';
+		printf("Entró en el espacio");
 		ft_spaces(total, next);
 		ft_putstr_fd(null, 1, next);
 	}
