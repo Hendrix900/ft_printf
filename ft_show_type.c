@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 02:22:16 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/18 20:04:21 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 20:05:34 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,5 @@ void	ft_show_type(const char *s, t_list_printf *next)
 		ft_show_hexa(s, next);
 	}
 	else
-		ft_show_type_more(s, next);
+		ft_show_type_more(next);
 }
