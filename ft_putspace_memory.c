@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 00:21:11 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/18 07:14:41 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 07:23:05 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,11 @@ void	ft_put_w_p(size_t p, size_t w, char *new, t_list_printf *next)
 void	ft_check_w_p(size_t p, size_t w, char *new, t_list_printf *next)
 {
 	size_t	variable;
-
-	variable = ft_strlen(new);
+	
+	if (new[0] == '0')
+		variable = 2;
+	else
+		variable = ft_strlen(new);
 	p += 2;
 	if (w == p)
 		ft_putzero(new, next);
