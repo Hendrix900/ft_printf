@@ -6,7 +6,7 @@
 #    By: ccastill <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/19 06:55:26 by ccastill          #+#    #+#              #
-#    Updated: 2020/07/17 23:15:10 by ccastill         ###   ########.fr        #
+#    Updated: 2020/07/18 18:48:10 by ccastill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ FUN_LIBFT = ./libft/ft_atoi.c ./libft/ft_itoa.c ./libft/ft_substr.c ./libft/ft_s
 			
 OBJS_LIBFT = ./libft/ft_atoi.o ./libft/ft_itoa.o ./libft/ft_substr.o ./libft/ft_strlen.o ./libft/ft_strjoin.o \
 		
-CFLAGS = -c #-I -Wall -Wextra -Werror -g # Quitar la -g
+CFLAGS = -c -I -Wall -Wextra -Werror 
 
 all: $(NAME) 
 $(NAME): $(OBJS_PRINTF) $(OBJS_LIBFT) ft_printf.h ./libft/libft.h

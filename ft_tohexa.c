@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 08:10:18 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/11 05:33:39 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 18:45:22 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ char	*ft_tohexa(unsigned int nb, char x)
 {
 	char				*new;
 	char				*hexa;
-	unsigned  int		nbr;
-	int	count;
+	unsigned int		nbr;
+	int					count;
 
 	hexa = (x == 'X') ? "0123456789ABCDEF" : "0123456789abcdef";
 	count = 0;

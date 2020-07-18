@@ -6,13 +6,13 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 01:09:36 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/17 16:49:45 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 18:20:23 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int check_str(const char *s, t_list_printf *next)
+int		check_str(const char *s, t_list_printf *next)
 {
 	next->flags = 0;
 	next->width = 0;
@@ -25,11 +25,6 @@ int check_str(const char *s, t_list_printf *next)
 	next->punt = ft_punt(s, next);
 	next->precision = ft_precision(s, next);
 	next->type = ft_type(s, next);
-//	printf("El ancho es : %d\n", next->width);//
-//	printf("LA precision es : %d\n", next->precision);//
-//	printf("LAs flags son : %d\n", next->flags);//
-//	printf("EL punt es: %c\n", next->punt);//
-//	printf("El next->neg es %d\n", next->neg);
 	if (next->ar_neg == 1)
 		next->flags = '-';
 	if (next->type == 0)
@@ -39,9 +34,9 @@ int check_str(const char *s, t_list_printf *next)
 	return (0);
 }
 
-void str_printf(const char *s, t_list_printf *next)
+void	str_printf(const char *s, t_list_printf *next)
 {
-	int err;
+	int	err;
 
 	while (s[next->len] != '\0')
 	{
@@ -56,19 +51,19 @@ void str_printf(const char *s, t_list_printf *next)
 			while (s[next->len] == ' ')
 				next->len++;
 			if (s[next->len] == '\0')
-				break;
+				break ;
 			else
 				err = check_str(s, next);
 			if (err == -1)
-				break;
+				break ;
 		}
 		next->len++;
 	}
 }
 
-int ft_printf(const char *s, ...)
+int		ft_printf(const char *s, ...)
 {
-	t_list_printf *next;
+	t_list_printf	*next;
 	int				br;
 
 	if (!(next = malloc(sizeof(t_list_printf))))

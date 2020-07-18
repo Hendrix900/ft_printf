@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/21 14:55:47 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/15 20:05:35 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 18:30:45 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_putchar_fd(char c, int fd, t_list_printf *next)
 {
 	write(fd, &c, 1);
-	next->br++;	
+	next->br++;
 }

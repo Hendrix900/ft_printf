@@ -6,13 +6,13 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 08:37:17 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/17 12:15:47 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 18:46:31 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_zeros(int n, t_list_printf  *next)
+void	ft_zeros(int n, t_list_printf *next)
 {
 	while (n > 0)
 	{

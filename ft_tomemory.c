@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:20:42 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/18 06:12:44 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 18:45:38 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_tomemory(long int nb)
 	long int			len;
 
 	base = "0123456789abcdef";
-	len = 0; 
+	len = 0;
 	nbr = nb;
 	while (nb != 0)
 	{

@@ -6,16 +6,16 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/21 15:07:12 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/15 20:25:04 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 18:37:07 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putstr_fd(char *s, int fd, t_list_printf  *next)
+void	ft_putstr_fd(char *s, int fd, t_list_printf *next)
 {
 	int l;
-	
+
 	l = 0;
 	if (s != 0)
 		while (s[l])
