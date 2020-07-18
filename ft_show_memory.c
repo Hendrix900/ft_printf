@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:19:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/18 07:03:29 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 07:06:19 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ void	ft_memoryspace(char *new, t_list_printf *next, char *null)
 
 	width = next->width;
 	variable = ft_strlen(new) + ft_strlen(null);
-	total = width - variable;
 	if (variable >= width)
 		ft_putstr_fd(ft_strjoin(null, new), 1, next);
 	else if (variable < width)
@@ -83,7 +82,6 @@ void ft_show_memory(const char *s , t_list_printf *next)
 	
 	null = "0x";
 	new = ft_tomemory(next->p);
-//	printf("DEntro de new hay : %c\n", new[0]);
 	if (next->flags >= 1 && next->punt > 1)
 		ft_putspace_memory(new, next);
 	else if ((next->flags == 1) || (next->flags == '-') || (next->flags == '*')) 
