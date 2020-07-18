@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:19:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/18 03:18:54 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 06:12:25 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,10 @@ void	ft_memorypunt(char *new, t_list_printf *next, char *null)
 	size_t	precision;
 	size_t	variable;
 	int		total;
-	
+
+	if (new[0] == '0')
+	new[0] = '\0';  
+
 	precision = next->precision;
 	variable = ft_strlen(new);
 	if (variable >= precision)
@@ -46,7 +49,7 @@ void	ft_memorypunt(char *new, t_list_printf *next, char *null)
 	else if (variable < precision)
 	{
 		total = precision - variable;
-		next->punt == '.' ? ft_putstr_fd(ft_strjoin(null, new), 1, next) :
+		next->punt == '.' ? ft_putstr_fd(ft_strjoin(null, new), 1, next) : // cambiado next->precision por punt
 		ft_putstr_fd(null, 1, next);
 		ft_zeros(total, next);
 		next->punt == '.' ? ft_putstr_fd(ft_strjoin(null, new), 1, next) :
@@ -82,6 +85,7 @@ void ft_show_memory(const char *s , t_list_printf *next)
 	
 	null = "0x";
 	new = ft_tomemory(next->p);
+//	printf("DEntro de new hay : %c\n", new[0]);
 	if (next->flags >= 1 && next->punt > 1)
 		ft_putspace_memory(new, next);
 	else if ((next->flags == 1) || (next->flags == '-') || (next->flags == '*')) 
