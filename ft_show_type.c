@@ -6,13 +6,13 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 02:22:16 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/18 19:55:37 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 20:04:21 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_show_type_more(const char *s, t_list_printf *next)
+void	ft_show_type_more(t_list_printf *next)
 {
 	if (next->type == 'p')
 	{
