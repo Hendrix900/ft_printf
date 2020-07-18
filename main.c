@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/21 19:48:56 by carlos            #+#    #+#             */
-/*   Updated: 2020/07/18 07:12:33 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 07:50:44 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,18 +97,24 @@ int main ()
     printf("%d\n", f);
     printf("%d\n", g);
 */
-    f = ft_printf("%5.p\n", NULL); //PASA
-    g = printf("%5.p\n", NULL);
-
-    printf("%d\n", f);
-    printf("%d\n", g);
-  /*  
-    f = ft_printf("%2.p\n", NULL); //PASA
-    g = printf("%2.p\n", NULL);
+    f = ft_printf("%.p\n", NULL);
+    g = printf("%.p\n", NULL);
 
     printf("%d\n", f);
     printf("%d\n", g);
 
+    f = ft_printf("%.5p\n", 0);
+    g = printf("%.5p\n", 0);
+
+    printf("%d\n", f);
+    printf("%d\n", g);
+  
+    f = ft_printf("%.0p\n", 0);
+    g = printf("%.0p\n", 0);
+
+    printf("%d\n", f);
+    printf("%d\n", g);
+/*
 
     f = ft_printf("%.5p\n", 0);
     g = printf("%.5p\n", 0);
