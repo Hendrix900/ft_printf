@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 03:43:18 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/18 18:43:20 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 19:01:45 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_check_str(const char *new, t_list_printf *next)
 	ft_putspace(conver, next);
 }
 
-void	ft_show_str(const char *s, t_list_printf *next)
+void	ft_show_str(t_list_printf *next)
 {
 	char	*new;
 	char	*null;

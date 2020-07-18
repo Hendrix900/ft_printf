@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:19:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/18 18:42:08 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 19:02:33 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void	ft_memoryspace(char *new, t_list_printf *next, char *null)
 	}
 }
 
-void	ft_show_memory(const char *s, t_list_printf *next)
+void	ft_show_memory(t_list_printf *next)
 {
 	char	*new;
 	char	*null;

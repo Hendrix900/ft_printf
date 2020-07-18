@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 02:22:16 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/18 18:59:04 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 19:03:14 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,17 @@ void ft_show_type(const char *s, t_list_printf *next)
 	else if (next->type == 's')
 	{
 		next->str = va_arg(next->args, char *);
-		ft_show_str(s,next);
+		ft_show_str(next);
 	}
 	else if (next->type == 'x')
 	{
 		next->hexa = va_arg(next->args, int);
-		ft_show_hexa(s,next);
+		ft_show_hexa(next);
 	}
 	else if (next->type == 'p')
 	{
 		next->p = va_arg(next->args, long int);
-		ft_show_memory(s,next);
+		ft_show_memory(next);
 	}
 	else if (next->type == 'u')
 	{
