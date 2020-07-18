@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:19:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/19 00:56:43 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/19 01:48:19 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ void	ft_show_memory(t_list_printf *next)
 	else if ((next->flags == 1) || (next->flags == '-') || (next->flags == '*'))
 		ft_memoryspace(new, next, null);
 	else if (next->punt == '.')
-		ft_memorypunt(precision, new, next, null);
+		ft_memorypunt(new, precision, next, null);
 	else if (next->flags == '0')
 		ft_memoryzero(new, next, null);
 	else
