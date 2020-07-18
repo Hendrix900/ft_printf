@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/16 05:05:27 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/19 01:31:00 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/19 01:34:32 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_asterisk_precision(t_list_printf *next)
 {
 	next->precision = va_arg(next->args, int);
 	if (next->precision < 0)
-		next->precision = 0; //quitado punt, puesto precision
+		next->punt = 0; //quitado punt, puesto precision
 	next->len++;
 }
 
