@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 00:21:11 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/18 02:25:06 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/18 02:36:07 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	ft_check_ast(size_t p, size_t w, char *new, t_list_printf *next)
 {
 	int count;
 	
-	if (next->type == '%')
-		p = 0;
 	count = 0;
 	if (next->flags != '-')
 		ft_spaces(w, next);
@@ -36,6 +34,8 @@ void	ft_check_s_z(size_t p, size_t w, char *new, t_list_printf *next)
 {
 	size_t	variable;
 
+	if (next->type == '%')
+		p = 0;
 	variable = ft_strlen(new);
 	if (next->neg == 1)
 	{
