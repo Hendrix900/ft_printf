@@ -6,48 +6,49 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/16 05:05:27 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/17 01:39:25 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/19 01:24:38 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	ft_strlen_print_p(const char *s, int l)
+size_t	ft_strlen_str_precision(const char *s, int l)
 {
-	size_t q;
+	size_t count;
 
-	q = 0;
+	count = 0;
 	while (s[l] >= '0' && s[l] <= '9')
 	{
-		q++;
+		count++;
 		l++;
 	}
-	return (q);
+	return (count);
+}
+
+void	ft_asterisk_precision(t_list_printf *next)
+{
+	next->precision = va_arg(next->args, int);
+	if (next->precision < 0)
+		next->precision = 0; //quitado punt, puesto precision
+	next->len++;
 }
 
 int		ft_precision(const char *s, t_list_printf *next)
 {
-	char	*substr;
-	size_t	q;
+	char	*new;
 
 	if (next->punt == '.')
 	{
 		if (s[next->len] >= '0' && s[next->len] <= '9')
 		{
-			substr = ft_substr(s, next->len,
-					(q = ft_strlen_print_p(s, next->len)));
-			next->precision = ft_atoi(substr);
-			free(substr);
-			substr = NULL;
-			next->len += q;
+			new = ft_substr(s, next->len, ft_strlen_str(s, next->len));
+			next->width = ft_atoi(new);
+			free(new);
+			new = NULL;
+			next->len += ft_strlen_str(s, next->len);
 		}
 		else if (s[next->len] == '*')
-		{
-			next->precision = va_arg(next->args, int);
-			if (next->precision < 0)
-				next->punt = 0;
-			next->len++;
-		}
+			ft_asterisk(next);
 	}
 	return (next->precision);
 }
