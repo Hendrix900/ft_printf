@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:19:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/19 00:56:43 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/19 01:28:24 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	ft_memoryzero(char *new, t_list_printf *next, char *null)
 	}
 }
 
-void	ft_memorypunt(char *new, size_t p, t_list_printf *next, char *null)
+void	ft_memorypunt(size_t p, char *new, t_list_printf *next, char *null)
 {
 	size_t	variable;
 	int		total;
