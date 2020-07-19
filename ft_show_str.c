@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 03:43:18 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/18 19:01:45 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/19 02:09:50 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,8 @@ void	ft_show_str(t_list_printf *next)
 		ft_putzero(new, next);
 	else
 		ft_putstr_fd(new, 1, next);
+	free(null);
+	null = NULL;
+	free(new);
+	new = NULL;
 }
