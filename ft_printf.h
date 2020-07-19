@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 21:55:45 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/18 19:42:25 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/19 02:29:55 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,22 +21,22 @@
 typedef struct		s_list_printf
 {
 	va_list			args;
-	int				br; //Conocer cuantas posiciones se han contado para devolver el valor.
-	int				flags; // Contendrá un ('0') o (1) o ('-') En caso de haberlo
-	int				punt; // Contendrá un ('.') En caso de haberlo
-	int				width; // Servirá para comprobar el ancho
-	int				precision; // Servira para comprobar la precisión
-	int				type; // Servirá para comprobar los tipos.
-	int				neg; // variable para números negativos
+	int				br;
+	int				flags;
+	int				punt;
+	int				width;
+	int				precision;
+	int				type;
+	int				neg;
 	int				ar_neg;
 	int				memory;
-	int				len; // Posición de la cadena
-	int				i; // %i o %d
-	int				c; // %c Caracteres ASCII
-	char			*str; // %s Cadena de caracteres
-	long int		hexa; // %xX hexadecimal
-	long int		p; // %p puntero (Dirección de memoria)
-	unsigned int	u; // %u Entero sin sígno.
+	int				len;
+	int				i;
+	int				c;
+	char			*str;
+	long int		hexa;
+	long int		p;
+	unsigned int	u;
 
 }					t_list_printf;
 
