@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 02:19:04 by ccastill          #+#    #+#             */
-/*   Updated: 2020/07/20 10:16:17 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/07/20 10:26:42 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ void	ft_memorypunt(char *new, size_t p, t_list_printf *next, char *j)
 			ft_putstr_fd((j = ft_strjoin("0x", new)), 1, next);
 		else if (variable < p)
 		{
-			//total = p - variable;
 			next->punt == '.' ? ft_putstr_fd((j = ft_strjoin("0x", new))
 			, 1, next) : ft_putstr_fd("0x", 1, next);
 			ft_zeros(total, next);
